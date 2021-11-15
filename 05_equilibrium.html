@@ -34,10 +34,10 @@
 <!--    Navigation Bar  -->
     <div class="row" style="position:relative; border-bottom: solid; border-color: #f5ce42; border-width: 20px; background-color: #f5ce42;">
         <div class="col-md-1"></div>
-        <div class="col-md-2"><a href="02_reality.html"><img id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
-        <div class="col-md-2"><a href="03_idealization.html"><img id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
-        <div class="col-md-2"><a href="04_descretization.html"><img id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
-        <div class="col-md-2"><a href="#"><img id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
+        <div class="col-md-2"><a href="02_reality.html"><img style="outline: 6px solid #4f7eff; opacity: 100%;"style="outline: 6px solid #4f7eff; opacity: 100%;" id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
+        <div class="col-md-2"><a href="03_idealization.html"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
+        <div class="col-md-2"><a href="04_descretization.html"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
+        <div class="col-md-2"><a href="#"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
         <div class="col-md-2"><a href="06_solution.html"><img id="img5" src="images\dummy4.jpg" alt="dummy.jpg"><div class="content" id="text5"></div></a></div>
         <div class="col-md-1"></div>
         <svg style="z-index: 1;top: 15px; position: absolute;" width="100%" height="20px" viewBox="0 0 6 2">
@@ -74,6 +74,7 @@
 <!--        Force Equation(close)  -->
 <!--        Force Vectors  -->
         <div class="col-md-6" style="border-top: solid; border-right: solid; border-color: #f5ce42; border-width: 20px;">
+            <h3 style="height: 2px; text-align: left;">Click any pressure element</h3>
             <svg width="100%" height="100%" viewBox="0 0 200 200" id="svg">
 <!--                Axis  -->
                 <path id="axis" stroke="black" stroke-width="2" style="stroke-opacity: 70%;"/>
@@ -87,6 +88,7 @@
                 <rect id="pe4" fill="#90defc"/><rect id="pe5" fill="#7ed9fc"/><rect id="pe6" fill="#68d3fc"/>
                 <rect id="pe7" fill="#56bce3"/><rect id="pe8" fill="#4a9dbd"/><rect id="pe9" fill="#3a829e"/>
                 <rect id="ground" fill="#24753a"/>
+                <rect id="border" stroke="black" stroke-width="1" style="stroke-opacity: 70%" fill-opacity="0"/>
 <!--                Background  -->
                 <circle id="circle"/>
 <!--                ith Pressure element  -->
@@ -94,12 +96,38 @@
 <!--                Force Vectors  -->
 <!--                Weight  -->
                 <path id="vector01" stroke="red" stroke-width="2" stroke-linecap="round" style="stroke-opacity: 100%;"/>
+                  <text style="font-size: 5px;">
+                    <textPath href="#vector01">
+                      <tspan x="2" y="-2">F1</tspan>
+                    </textPath>
+                  </text>
 <!--                Pressure from top  -->
                 <path id="vector02" stroke="red" stroke-width="2" stroke-linecap="round" style="stroke-opacity: 100%;"/>
+                  <text style="font-size: 5px;">
+                    <textPath href="#vector02">
+                      <tspan x="2" y="-5">F2</tspan>
+                    </textPath>
+                  </text>
 <!--                Pressure from bottom  -->
                 <path id="vector03" stroke="red" stroke-width="2" stroke-linecap="round" style="stroke-opacity: 100%;"/>
+                  <text style="font-size: 5px;">
+                    <textPath href="#vector03">
+                      <tspan x="2" y="-2">F3</tspan>
+                    </textPath>
+                  </text>
 <!--                Length element  -->
                 <line id="line" stroke="green" stroke-width="1" style="stroke-opacity: 70%;" stroke-dasharray="1"/>
+                  <text style="font-size: 5px;">
+                    <textPath href="#line" startOffset="50%" dominant-baseline="top" text-anchor="middle">
+                      <tspan x="3" y="4">dz</tspan>
+                    </textPath>
+                  </text>
+                <line id="line0" stroke="black" stroke-width="1" style="stroke-opacity: 70%;" stroke-dasharray="1"/>
+                  <text style="font-size: 9px;">
+                    <textPath href="#border" startOffset="50%" dominant-baseline="top" text-anchor="middle">
+                      <tspan x="69" y="-6">z</tspan>
+                    </textPath>
+                  </text>
             </svg>
         </div>
 <!--        Force Vectors(close)  -->

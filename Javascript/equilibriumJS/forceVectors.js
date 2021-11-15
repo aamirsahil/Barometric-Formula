@@ -8,26 +8,43 @@ for(let i = 1; i < 10; i++)
         svg.pElement[i-1].style.strokeWidth = ".3px";
         svg.pElement[i-1].style.strokeOpacity = "70%";
     });
-}
 // Element Highlight removed on mouse out
-for(let i = 1; i < 10; i++)
-{
     d3.select("#pe" + i.toString()).on("mouseout",function()
     {
         let svg = new SVG();
         svg.pElement[i-1].style.stroke = "";
     });
-}
 // Element display on click
-for(let i = 1; i < 10; i++)
-{
     d3.select("#pe" + i.toString()).on("click",function()
     {
         let svg = new SVG();
         svg.drawPElementSelect(i);
 // Take care of table entries(function defined at forceTable.js
         tableValues(i);
+        pointLine(svg.line0, i);
+        drawBorder(svg.border, i);
     });
+}
+function drawBorder(border, i)
+{
+    let val = 0;
+    let str = "";
+    val = 120 - (i+1)*11;
+    str = val.toString();
+    border.setAttribute('x',"20");
+    border.setAttribute('y',str);
+    border.setAttribute('width',"90");
+    border.setAttribute('height',"11");
+}
+function pointLine(line, i)
+{
+    i = 11 - i;
+    let space = (32 - 21);
+    let posy = (space * (i-1) + space - .4).toString();
+    line.setAttribute('x1','48');
+    line.setAttribute('y1','109');
+    line.setAttribute('x2','48');
+    line.setAttribute('y2', posy);
 }
 
 function getPressureElement()
@@ -55,6 +72,8 @@ class SVG
         this.vector02 = document.getElementById("vector02");
         this.vector03 = document.getElementById("vector03");
         this.line = document.getElementById("line");
+        this.line0 = document.getElementById("line0");
+        this.border = document.getElementById("border");
     }
 }
 
