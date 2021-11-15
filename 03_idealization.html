@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Idealization</title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="earth.css">
+    <link rel="stylesheet" href="atmosphere.css">
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+<body>
+
+<div class="container-fluid">
+<!--    The Navigation Bar  -->
+    <div class="row" style="position:relative; border-bottom: solid; border-color: #f5ce42; border-width: 20px; background-color: #f5ce42;">
+        <div class="col-md-1"></div>
+        <div class="col-md-2"><a href="02_reality.html"><img id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
+        <div class="col-md-2"><a href="#"><img id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
+        <div class="col-md-2"><a href="04_descretization.html"><img id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
+        <div class="col-md-2"><a href="05_equilibrium.html"><img id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
+        <div class="col-md-2"><a href="06_solution.html"><img id="img5" src="images\dummy4.jpg" alt="dummy.jpg"><div class="content" id="text5"></div></a></div>
+        <div class="col-md-1"></div>
+        <svg style="z-index: 1;top: 15px; position: absolute;" width="100%" height="20px" viewBox="0 0 6 2">
+            <path d="M -100 1.5 H -28" stroke="black" stroke-width="1" style="stroke-opacity: 70%;"></path>
+        </svg>
+    </div>
+<!--    The Navigation Bar(close)  -->
+<!--    Main Body  -->
+    <div class="row">
+<!--    Left Hand Column(Blood pressure vs Atmospheric pressure)  -->
+        <div class="col-md-3 vh-100" style="border-right: solid; border-color: #f5ce42; border-width: 20px;">
+            <h1>Idealization</h1>
+            <ul>
+                <li>Strip away unnecessary details to focus on problem at hand.</li>
+            </ul>
+        </div>
+<!--        Left Hand Column(close)  -->
+<!--        Center Column(System)  -->
+        <div class="col-md-5" style="text-align: center;">
+            <div id="container">
+                <div id="earth"></div>
+                <div id="atmos1"></div>
+                <div id="atmos2"></div>
+                <div id="atmos3"></div>
+                <div id="atmos4"></div>
+                <div id="selection" style="cursor: pointer;" onclick="window.location='04_descretization.html';"></div>
+            </div>
+            <div class="slidecontainer" style="width: 100%; padding-top: 27px;">
+              <input style="width: 100%" type="range" min="0" max="100" value="0" class="slider" id="myRange02" autocomplete="off">
+            </div>
+            <b><p id="idealExp" style="font-size: 20px;">We need to make approximations.</p></b>
+        </div>
+        <div class="col-md-1">
+<!--            <div class="row v-h100" style="padding-top: 35px;">-->
+<!--                <b><h2>Parameters</h2></b>-->
+<!--            </div>-->
+            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
+                <button type="button" class="btn btn-primary" id="rotBt">Rotation</button>
+            </div>
+            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
+                <button type="button" class="btn btn-primary" id="curBt">Curvature</button>
+            </div>
+            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
+                <button type="button" class="btn btn-primary" id="htBt">Heat Source</button>
+            </div>
+            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
+                <button type="button" class="btn btn-primary" id="grBt">Gravity</button>
+            </div>
+            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
+                <button type="button" class="btn btn-primary" id="airBt">Composition of Air</button>
+            </div>
+        </div>
+<!--        Center Column(close)  -->
+<!--        Right Hand Column(Cooking)  -->
+        <div class="col-md-3 vh-100" style="text-align: center; border-left: solid; border-color: #f5ce42; border-width: 20px;">
+            <div class="container" style="position:relative; height: 30%;">
+                <img src="images\idealization\id.png" alt="dummy.jpg" style="top:15px; left: 25px; position: absolute; width: 18rem; height: 13rem;">
+                <img src="images\idealization\exa01.jpg" alt="dummy.jpg" style="top:15px; left: 25px; position: absolute; width: 18rem; height: 13rem;" id="img04">
+            </div>
+            <div class="container" style="position:relative; height: 32%;">
+                <img src="images\idealization\id.png" alt="dummy.jpg" style="top:15px; left: 25px; position: absolute; width: 18rem;height: 13rem;">
+                <img src="images\idealization\exa02.png" alt="dummy.jpg" style="top:15px; left: 25px; position: absolute; width: 18rem;height: 13rem;" id="img05">
+            </div>
+            <p id="desc" style="height:90px;">Both these systems require us to find the atmosphere pressure at the given altitude so that the difference in internal and external pressure can be calculated.</p>
+            <div class="slidecontainer">
+              <input style="width: 100%;" type="range" min="0" max="100" value="0" class="slider" id="myRange03" autocomplete="off">
+            </div>
+        </div>
+<!--        Right Hand Column(close)  -->
+    </div>
+<!--    Main Body(close)  -->
+</div>
+
+</body>
+<script src="javascript\idealizationJS\idealization.js"></script>
+<script src="javascript\idealizationJS\example.js"></script>
+<script src="Javascript\navbar.js"></script>
+</html>

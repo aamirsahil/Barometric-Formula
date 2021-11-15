@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overview</title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_overview.css">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <h1 style="text-align:center;">Barometric Formula</h1>
+<!--Image Row  -->
+  <div class="row" style="padding-top: 3%">
+    <svg width="100%" height="50px" viewBox="0 0 200 50">
+      <path d="M -400 10 L 520 2 L 550 10 L 520 18 L -400 10" fill="#f5ce42" stroke="black" stroke-width=".3px"/>
+    </svg>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+      <div class="centered"><a href="02_reality.html"><img id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"></a></div>
+      <div class="content" id="text1" onclick="window.location='02_reality.html';"></div>
+    </div>
+    <div class="col-md-2">
+      <div class="centered"><a href="03_idealization.html"><img id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"></a></div>
+      <div class="content" id="text2" onclick="window.location='03_idealization.html';"></div>
+    </div>
+    <div class="col-md-2">
+      <div class="centered"><a href="04_descretization.html"><img id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"></a></div>
+      <div class="content" id="text3" onclick="window.location='04_descretization.html';"></div>
+    </div>
+    <div class="col-md-2">
+      <div class="centered"><a href="05_equilibrium.html"><img id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"></a></div>
+      <div class="content" id="text4" onclick="window.location='05_equilibrium.html';"></div>
+    </div>
+    <div class="col-md-2">
+      <div class="centered"><a href="06_solution.html"><img id="img5" src="images\dummy.jpg" alt="dummy.jpg"></a></div>
+      <div class="content" id="text5" onclick="window.location='06_solution.html';"></div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+<!--  Image Row(end)  -->
+<!--  Text Row  -->
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+      <div class="centered">
+        <div class="card-body">
+          <h5 class="card-title">Reality</h5>
+          <p class="card-text">We start with real life instances that would motivate and facilitate the initial steps.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="centered">
+        <div class="card-body">
+          <h5 class="card-title">Idealization</h5>
+          <p class="card-text">Strip away unnecessary details.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="centered">
+        <div class="card-body">
+          <h5 class="card-title">Descretization</h5>
+          <p class="card-text">Devide to small group such that each element have the same physics.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="centered">
+        <div class="card-body">
+          <h5 class="card-title">Equilibrium</h5>
+          <p class="card-text">Come up with a differential equation connecting desired variables.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="centered">
+        <div class="card-body">
+          <h5 class="card-title">Solution</h5>
+          <p class="card-text">Solve the differential equation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+<!--  Text Row(end)  -->
+<!--&lt;!&ndash;  Button Row  &ndash;&gt;-->
+<!--  <div class="row">-->
+<!--    <div class="col-md-1"></div>-->
+<!--    <div class="col-md-2">-->
+<!--      <div class="centered">-->
+<!--          <a href="02_reality.html" class="btn btn-primary">Go to Reality</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-2">-->
+<!--      <div class="centered">-->
+<!--          <a href="03_idealization.html" class="btn btn-primary">Go to Idealization</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-2">-->
+<!--      <div class="centered">-->
+<!--          <a href="04_descretization.html" class="btn btn-primary">Go to Descretization</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-2">-->
+<!--      <div class="centered">-->
+<!--          <a href="05_equilibrium.html" class="btn btn-primary">Go to Equilibrium</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-2">-->
+<!--      <div class="centered">-->
+<!--          <a href="06_solution.html" class="btn btn-primary">Go to Solution</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-1"></div>-->
+<!--  </div>-->
+<!--&lt;!&ndash;  Button Row(end)  &ndash;&gt;-->
+</div>
+
+</body>
+<script src="Javascript\overview.js"></script>
+</html>
