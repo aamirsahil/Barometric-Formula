@@ -8,7 +8,6 @@ for(let i = 1; i < 6; i++)
         text.style.visibility = "visible";
         text.innerHTML = "Go To " + desc[i-1];
         img.style.opacity = "50%";
-        img.style.border = "5px solid black";
     });
     d3.select("#img" + i.toString()).on("mouseout", function()
     {
@@ -17,6 +16,5 @@ for(let i = 1; i < 6; i++)
         text.style.visibility = "hidden";
         text.innerHTML = ""
         img.style.opacity = "100%";
-        img.style.border = "";
     });
 }
