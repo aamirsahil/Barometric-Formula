@@ -67,6 +67,7 @@ function sliderReady()
         let max = d3.select(this).property("max");
         let min = d3.select(this).property("min");
         let button = document.getElementById("button02");
+        let exercise = document.getElementById("exercise");
         let length = value/(max - min);
 
         if(length < 1/4)
@@ -93,6 +94,7 @@ function sliderReady()
             step2.style.visibility = "visible";
             step3.style.visibility = "visible";
             step4.style.visibility = "visible";
+            exercise.style.visibility = "visible";
         }
     });
 }
