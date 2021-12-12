@@ -23,7 +23,7 @@
         <div class="col-md-2"><a href="04_descretization.html"><img id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
         <div class="col-md-2"><a href="05_equilibrium.html"><img id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
         <div class="col-md-2"><a href="06_solution.html"><img id="img5" src="images\navbar\navbar05.png" alt="dummy.jpg"><div class="content" id="text5"></div></a></div>
-        <div class="col-md-1"></div>
+        <div class="col-md-1" style="position: relative;"><a href="07_final.html"><img style="z-index:2;right: 50%; top: 7px; position: absolute;height:60%; width:80%" src="images\navbar\finish.png" alt="dummy.jpg"></a></div>
         <svg style="z-index: 1;top: 15px; position: absolute;" width="100%" height="20px" viewBox="0 0 6 2">
             <path d="M -100 1.5 H -53" stroke="black" stroke-width="1" style="stroke-opacity: 70%;"></path>
         </svg>
@@ -31,26 +31,30 @@
 <!--    The Navigation Bar(close)  -->
     <div class="row"  style="height: 105px; border-bottom: solid; border-color: #f5ce42; border-width: 20px;">
         <div class="col-md-12 vh-100">
-            <h1>Reality : </h1><span>We first look at real life instances which could help us derive the formula.</span>
+            <h1>Reality</h1><span>A derivation is a process of finding relationship between quantifiable parameters.
+            For this we first need to look at real life instances which could motivate us to derive the formula.</span>
         </div>
     </div>
     <div class="row" style="background-color: #f5ce42;">
         <div class="col-md-4 vh-100">
             <img id="img01" src="images\reality\mountainClimbing.jpg">
             <div class="content" id="text01"></div>
+            <button id="click01" type="button" class="btn btn-primary" onclick="window.location='02_reality2.html';">Click Me</button>
         </div>
         <div class="col-md-4 vh-100">
-            <img id="img02" src="images\reality\climate.jpg">
+            <img id="img02" src="images\reality\boiling.jpg">
             <div class="content" id="text02"></div>
+            <button id="click02" type="button" class="btn btn-primary" onclick="window.location='02_reality2.html';">Click Me</button>
         </div>
         <div class="col-md-4 vh-100">
             <img id="img03" src="images\reality\hotbaloon.jpg">
             <div class="content" id="text03"></div>
+            <button id="click03" type="button" class="btn btn-primary" onclick="window.location='02_reality2.html';">Click Me</button>
         </div>
     </div>
-    <div class="d-grid" style="left:400px; width: 50%; position: absolute; top: 660px;">
-      <a href="03_idealization.html" class="btn btn-dark" type="button">Lets Idealize the System</a>
-    </div>
+<!--    <div class="d-grid" style="left:400px; width: 50%; position: absolute; top: 660px;">-->
+<!--      <a href="03_idealization.html" class="btn btn-dark" type="button">Lets Idealize the System</a>-->
+<!--    </div>-->
 </div>
 </body>
 <script src="Javascript\navbar.js"></script>

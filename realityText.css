@@ -4,6 +4,11 @@ position: relative;
   text-align: center;
    overflow: hidden;
 }
+#click01, #click02, #click03{
+  position:absolute;
+  left: 40%;
+  top: 50%;
+}
 #img01, #img02, #img03{
 border: 8px solid #555;
  height: 60%;

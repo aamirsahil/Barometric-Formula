@@ -19,12 +19,12 @@
 <!--    Navigation Bar  -->
     <div class="row" style="position:relative; border-bottom: solid; border-color: #f5ce42; border-width: 20px; background-color: #f5ce42;">
         <div class="col-md-1" style="position: relative;"><a href="01_overview.html"><img style="z-index:2; left: 0; top: 7px; position: absolute;height:60%; width:70%" src="images\navbar\start.png" alt="dummy.jpg"></a></div>
-        <div class="col-md-2"><a href="02_reality.html"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
-        <div class="col-md-2"><a href="03_idealization.html"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
-        <div class="col-md-2"><a href="04_descretization.html"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
-        <div class="col-md-2"><a href="05_equilibrium.html"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
+        <div class="col-md-2"><a href="02_reality.html"><img id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
+        <div class="col-md-2"><a href="03_idealization.html"><img id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
+        <div class="col-md-2"><a href="04_descretization.html"><img id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
+        <div class="col-md-2"><a href="05_equilibrium.html"><img id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
         <div class="col-md-2"><a href="#"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img5" src="images\navbar\navbar05.png" alt="dummy.jpg"><div class="content" id="text5"></div></a></div>
-        <div class="col-md-1"></div>
+        <div class="col-md-1" style="position: relative;"><a href="07_final.html"><img style="z-index:2;right: 50%; top: 7px; position: absolute;height:60%; width:80%" src="images\navbar\finish.png" alt="dummy.jpg"></a></div>
         <svg style="z-index: 1; top: 15px; position: absolute;" width="100%" height="20px" viewBox="0 0 6 2">
             <path d="M -120 1.5 H 46" stroke="black" stroke-width="1" style="stroke-opacity: 70%;"></path>
         </svg>
@@ -33,26 +33,28 @@
 <!--    Main Body  -->
     <div class="row">
 <!--        Derivation  -->
-        <div class="col-md-6" id="exp" style="text-align:left;">
+        <div class="col-md-6" id="exp" style="text-align:left; font-size: 1.3em;">
 <!--            Derivation  -->
 <!--solution.js will create the necessary elements  -->
 <!--            Derivation(end)-->
         </div>
 <!--        Derivation(close)  -->
 <!--        WolframAlpha  -->
-        <div class="col-md-6 vh-100" style="border-left: solid; border-color: #f5ce42; border-width: 20px;">
-            <div class="row" style="border-bottom: solid; border-color: #f5ce42; border-width: 20px;">
-                <h3>Wolfram widget for calculation</h3>
-                <script type="text/javascript" id="WolframAlphaScript65884a38afa3e9a51770a396918fd5f" src="//www.wolframalpha.com/widget/widget.jsp?id=65884a38afa3e9a51770a396918fd5f"></script>
-            </div>
-            <div class="row" id="exercise" style="margin:auto; font-size: 1.5rem; visibility: hidden;">
-                <h1>Exercises</h1>
-                <ul>
-                    <li>Suppose that \(g\) is a function of \(z\).</li>
-                    <li>Instead of using ideal gas equation, try using Van der Waal's equation of state.</li>
-                    <li>Suppose that instead of made up of single molecule, the air is homogenous mixture of many molecules.</li>
-                </ul>
-            </div>
+        <div class="col-md-6 vh-100" style="background-color: #f5ce42; text-align: center; position: relative;">
+            <button id="button" style="top: 200px; position: absolute;" type="button" class="btn btn-primary" onclick="myFunction()">Graph</button><br>
+            <img src="images\graph.png" id="graph" style=" position: absolute; top: 10px; left: 140px; visibility: hidden; width: 75%; height: 75%; outline: 8px solid #555; border-radius: 20%;">
+<!--            <div class="row" style="border-bottom: solid; border-color: #f5ce42; border-width: 20px;">-->
+<!--                <h3>Wolfram widget for calculation</h3>-->
+<!--                <script type="text/javascript" id="WolframAlphaScript65884a38afa3e9a51770a396918fd5f" src="//www.wolframalpha.com/widget/widget.jsp?id=65884a38afa3e9a51770a396918fd5f"></script>-->
+<!--            </div>-->
+<!--            <div class="row" id="exercise" style="margin:auto; font-size: 1.5rem; visibility: hidden;">-->
+<!--                <h1>Exercises</h1>-->
+<!--                <ul>-->
+<!--                    <li>Variation in \(g\) with \(z\).</li>-->
+<!--                    <li>Different equation of state.</li>-->
+<!--                    <li>Mixture of gases.</li>-->
+<!--                </ul>-->
+<!--            </div>-->
         </div>
 <!--        WolframAlpha(close)  -->
     </div>
@@ -61,4 +63,11 @@
 </body>
 <script src="Javascript\solution.js"></script>
 <script src="Javascript\navbar.js"></script>
+<script>
+    function myFunction()
+    {
+        document.getElementById("graph").style.visibility = "visible";
+        document.getElementById("button").style.visibility = "hidden";
+    }
+</script>
 </html>

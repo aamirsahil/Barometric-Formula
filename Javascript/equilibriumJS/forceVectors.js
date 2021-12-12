@@ -20,7 +20,7 @@ for(let i = 1; i < 10; i++)
         let svg = new SVG();
         svg.drawPElementSelect(i);
 // Take care of table entries(function defined at forceTable.js
-        tableValues(i);
+//        tableValues(i);
         pointLine(svg.line0, i);
         drawBorder(svg.border, i);
     });
@@ -68,12 +68,20 @@ class SVG
         this.ground = document.getElementById("ground");
         this.circle = document.getElementById("circle");
         this.pElementSelect = document.getElementById("peSelect");
-        this.vector01 = document.getElementById("vector01");
-        this.vector02 = document.getElementById("vector02");
-        this.vector03 = document.getElementById("vector03");
+        this.vectorTop = document.getElementById("vectorsTop");
+        this.vectorBottom = document.getElementById("vectorsBottom");
+        this.weight = document.getElementById("weight");
+        this.atom = document.getElementById("atom");
         this.line = document.getElementById("line");
         this.line0 = document.getElementById("line0");
         this.border = document.getElementById("border");
+        this.vector01 = document.getElementById("vector01");
+        this.vector02 = document.getElementById("vector02");
+        this.vector03 = document.getElementById("vector03");
+        this.text01 = document.getElementById("text01");
+        this.text02 = document.getElementById("text02");
+        this.text03 = document.getElementById("text03");
+//        this.animate = document.getElementById("animate");
     }
 }
 
@@ -112,7 +120,18 @@ SVG.prototype.drawPElementSelect = function(i)
     this.setElement(i-1);
     this.drawVectors(i-1);
     this.drawLine();
+    this.drawPressure();
+}
 
+SVG.prototype.drawPressure = function()
+{
+    this.vectorTop.setAttribute('visibility', 'visible');
+    this.vectorBottom.setAttribute('visibility', 'visible');
+    this.weight.setAttribute('visibility', 'visible');
+    this.atom.setAttribute('visibility', 'visible');
+    this.text01.setAttribute('visibility', 'visible');
+    this.text02.setAttribute('visibility', 'visible');
+    this.text03.setAttribute('visibility', 'visible');
 }
 
 SVG.prototype.drawVectors = function(i)
@@ -122,7 +141,6 @@ SVG.prototype.drawVectors = function(i)
     let vector03Length = 25 * Math.exp(-i * dz);
     let vector02Length = vector03Length - vector01Length;
     vector02Length += 5;
-
     let vector01Pont = "M 85 25 V " + (25 + vector01Length).toString() +
                         " M 85 " + (25 + vector01Length).toString() +
                          " L 90 " + (20 + vector01Length).toString() + " M 85 " + (25 + vector01Length).toString() +
@@ -172,27 +190,3 @@ let svg = new SVG();
 svg.drawAxis();
 svg.drawGround();
 svg.drawPElement();
-
-//var svg = document.getElementById("svg");
-//var ref1 = vector01.getBoundingClientRect().y;
-////var ref2 = vector01.getBoundingClientRect().y + 30*svg.getBoundingClientRect().height/200
-//
-//d3.select("#vector01").call(d3.drag().on("drag",function(){
-//    var vector01 = document.getElementById("vector01");
-//    var mousePos = window.event;
-//    var svg = document.getElementById("svg");
-//
-//    vector01.points[0].y = (mousePos.clientY - ref1)*200/svg.getBoundingClientRect().height;
-//    if((70 - vector01.points[0].y) > 0)
-//    {
-//        vector01.points[1].y = vector01.points[0].y + 30;
-//        vector01.points[2].y = vector01.points[0].y + 30;
-//        vector01.points[5].y = vector01.points[0].y + 30;
-//        vector01.points[6].y = vector01.points[0].y + 30;
-//    }else{
-//        vector01.points[1].y = vector01.points[0].y - 30;
-//        vector01.points[2].y = vector01.points[0].y - 30;
-//        vector01.points[5].y = vector01.points[0].y - 30;
-//        vector01.points[6].y = vector01.points[0].y - 30;
-//    }
-//}));

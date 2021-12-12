@@ -34,7 +34,7 @@ function setEq(){
     slider.setAttribute('value','0');
     slider.setAttribute('class','slider');
     slider.style.transform = "rotate(90deg)";
-    slider.style.margin = "-70px";
+    slider.style.margin = "-100px";
 // Setting the inner html
     head.innerHTML = "Analytical treatment";
     step1.innerHTML = text1;
@@ -103,7 +103,7 @@ function createButton2()
     let button = document.createElement('button');
     button.setAttribute('id','button02');
     button.setAttribute('type','button');
-    button .innerHTML = "Go to Final"
+    button .innerHTML = "Go to Exercises"
     button.setAttribute('class','btn btn-success');
     button.style.float = "right";
     button.style.visibility = "hidden";
@@ -114,6 +114,6 @@ function button2Ready()
 {
     d3.select("#button02").on("click", function()
     {
-        window.location = '#';
+        window.location = '06_exercise.html';
     });
 }

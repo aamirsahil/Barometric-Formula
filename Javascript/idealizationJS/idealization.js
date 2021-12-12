@@ -33,7 +33,7 @@ function setAnim(length)
 
 function setImage(length)
 {
-    document.getElementById("earth").style.opacity = opacity(length,2/6,3/6).toString() + "%";
+    document.getElementById("earth").style.opacity = opacity(length,2.7/6,3/6).toString() + "%";
     document.getElementById("atmos1").style.opacity = opacity(length,3/6,4/6).toString() + "%";
     document.getElementById("atmos2").style.opacity = opacity(length,4/6,5.9/6).toString() + "%";
     document.getElementById("atmos3").style.opacity = opacity(length,5.9/6,1).toString() + "%";
@@ -58,6 +58,7 @@ function setText(length)
     }
     else if(length > (2/6) && length < (3/6)){
         document.getElementById("idealExp").innerHTML = "Curvature of the earth discarded";
+        setZoomCurve(length);
     }
     else if(length > (3/6) && length < (4/6)){
         document.getElementById("idealExp").innerHTML = "No heat source or sink present";
@@ -73,6 +74,17 @@ function setText(length)
     }
 }
 
+function setZoomCurve(length)
+{
+    let radius = -180*length + 110;
+    let zoom = 5400*length - 700;
+    document.getElementById("earth").style.borderRadius = radius.toString() + "%";
+    document.getElementById("earth").style.backgroundSize = zoom.toString() + "px";
+    document.getElementById("atmos1").style.borderRadius = radius.toString() + "%";
+    document.getElementById("atmos2").style.borderRadius = radius.toString() + "%";
+    document.getElementById("atmos3").style.borderRadius = radius.toString() + "%";
+    document.getElementById("atmos4").style.borderRadius = radius.toString() + "%";
+}
 function setBtn(length)
 {
     if(length < (1/6)){
