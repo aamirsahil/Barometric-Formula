@@ -77,7 +77,7 @@
                 </li>
                 <li>Here \(A\) is the cross-section area of the pressure element and \(dz\) it's thickness</li>
             </ul>
-            <button type="button" class="btn btn-primary" onclick="window.location='05_equilibrium2.html';">Go to Derivation</button>
+            <button autocomplete="off" id="derivation" type="button" class="btn btn-secondary" onclick="window.location='05_equilibrium2.html';" disabled>Click on one pressure element on the right</button>
 <!--explanation.js will create the necessary elements  -->
 <!--            Explanation(end)  -->
 <!--            Derivation  -->
@@ -250,9 +250,10 @@
                 </g>
 
 <!--                Length element  -->
+                <line id="line2" x1="146" y1="50" x2="154" y2="50"/>
                 <line id="line" stroke="green" stroke-width="1" style="stroke-opacity: 70%;" stroke-dasharray="1"/>
                   <text style="font-size: 5px;">
-                    <textPath href="#line" startOffset="50%" dominant-baseline="top" text-anchor="middle">
+                    <textPath id='dz' style="visibility: hidden;" href="#line2" startOffset="30%" text-anchor="middle">
                       <tspan x="3" y="4">dz</tspan>
                     </textPath>
                   </text>

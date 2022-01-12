@@ -56,10 +56,21 @@
             <div id="container">
                 <img src="images\Descretization\01.png" alt="dummy.jpg" style="width:530px;height:480px; top: 10px;" id="img01">
                 <div id="select" style="cursor: pointer;" onclick="window.location='05_equilibrium.html';"></div>
-            </div>
-            <div class="slidecontainer" style="top:50px;">
+            </div><br>
+            <div class="slidecontainer" style="position: absolute; bottom: 5%; z-index: 15; width: 70%;left: 40%;">
               <input style="width: 60%;" type="range" min="1" max="100" value="0" class="slider" id="myRange" autocomplete="off">
             </div>
+            <svg width="200%" height="50%" viewBox="0 0 200 50" id="svg" style="z-index: 0; position: absolute;top: 88%; left:-4%;">
+                <defs>
+                    <path id="marker" stroke-linecap="round" d="M 0 0 H 4 L 2 4"/>
+                </defs>
+                <use xlink:href="#marker" id="marker1" fill="#a6a5a2" x="35" y="0"/>
+                <use xlink:href="#marker" id="marker2" fill="#a6a5a2" x="48" y="0"/>
+                <use xlink:href="#marker" id="marker3" fill="#a6a5a2" x="60" y="0"/>
+                <use xlink:href="#marker" id="marker4" fill="#a6a5a2" x="71" y="0"/>
+                <use xlink:href="#marker" id="marker5" fill="#a6a5a2" x="84" y="0"/>
+                <use xlink:href="#marker" id="marker6" fill="#a6a5a2" x="97" y="0"/>
+            </svg>
         </div>
 <!--        Descretizing(close)  -->
     </div>

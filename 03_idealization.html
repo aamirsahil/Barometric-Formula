@@ -47,18 +47,32 @@
         </div>
 <!--        Left Hand Column(close)  -->
 <!--        Center Column(System)  -->
-        <div class="col-md-6" style="text-align: center; background-color: #f5ce42;">
+        <div class="col-md-6" style="position: relative; text-align: center; background-color: #f5ce42;">
             <div id="container">
-                <div id="earth"></div>
+                <div id="cloud"></div>
+                <div id="earthContainer"><div id="earth"></div></div>
+                <div id="space"></div>
                 <div id="atmos1"></div>
                 <div id="atmos2"></div>
                 <div id="atmos3"></div>
                 <div id="atmos4"></div>
                 <div id="selection" style="cursor: pointer;" onclick="window.location='04_descretization.html';"></div>
             </div>
-            <div class="slidecontainer" style="width: 100%; padding-top: 27px;">
-              <input style="width: 100%" type="range" min="0" max="100" value="0" class="slider" id="myRange02" autocomplete="off">
+            <br>
+            <div class="slidecontainer" style="position: absolute; bottom: 20%; z-index: 20; width: 100%; padding-top: 27px;">
+              <input style=" z-index: 20; width: 100%;" type="range" min="0" max="100" value="0" class="slider" id="myRange02" autocomplete="off">
             </div>
+            <svg width="200%" height="50%" viewBox="0 0 200 50" id="svg" style="z-index: 0; position: absolute;top: 73%; left:-4%;">
+                <defs>
+                    <path id="marker" stroke-linecap="round" d="M 0 0 H 4 L 2 4"/>
+                </defs>
+                <use xlink:href="#marker" id="marker1" fill="#5999e3" x="0" y="0"/>
+                <use xlink:href="#marker" id="marker2" fill="#a6a5a2" x="20" y="0"/>
+                <use xlink:href="#marker" id="marker3" fill="#a6a5a2" x="40" y="0"/>
+                <use xlink:href="#marker" id="marker4" fill="#a6a5a2" x="60" y="0"/>
+                <use xlink:href="#marker" id="marker5" fill="#a6a5a2" x="80" y="0"/>
+                <use xlink:href="#marker" id="marker6" fill="#a6a5a2" x="100" y="0"/>
+            </svg>
             <b><p id="idealExp" style="font-size: 20px;">We need to make approximations.</p></b>
         </div>
         <div class="col-md-1" style="background-color: #f5ce42;">

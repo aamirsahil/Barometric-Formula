@@ -18,12 +18,12 @@ border: 8px solid #555;
   left: 20px;
   top: 0;
 }
-.col-md-4 .content {
-    visibility: hidden;
+.col-md-6 .content {
+    visibility: visible;
     text-align: center;
       position: absolute; /* Position the background text */
-      top: 12%; /* At the bottom. Use top:0 to append it to the top */
-      left: 85px;
+      top: 10%; /* At the bottom. Use top:0 to append it to the top */
+      left: 10%;
       background: rgb(0, 0, 0); /* Fallback color */
       background: rgba(0, 0, 0, 0.75); /* Black background with 0.5 opacity */
       color: #f1f1f1; /* Grey text */

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Solution</title>
 
+    <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX","output/HTML-CSS"], tex2jax: { inlineMath: [["\\(","\\)"]] } }); </script>
@@ -12,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="arrowsSolution.css">
 
 </head>
 <body>
@@ -41,8 +43,21 @@
 <!--        Derivation(close)  -->
 <!--        WolframAlpha  -->
         <div class="col-md-6 vh-100" style="background-color: #f5ce42; text-align: center; position: relative;">
-            <button id="button" style="top: 200px; position: absolute;" type="button" class="btn btn-primary" onclick="myFunction()">Graph</button><br>
-            <img src="images\graph.png" id="graph" style=" position: absolute; top: 10px; left: 140px; visibility: hidden; width: 75%; height: 75%; outline: 8px solid #555; border-radius: 20%;">
+<!--            <div id="borderLeft" class="border" style="top: 30%; left: 5%;">-->
+<!--                <div class="arrow left"></div>-->
+<!--            </div>-->
+<!--            <div id="borderRight" class="border" style="top: 30%; right: 0%;">-->
+<!--                <div class="arrow right"></div>-->
+<!--            </div>-->
+            <img src="images\graph.png" id="graph" style="visibility: hidden; position: absolute; top: 10px; left: 113px; width: 75%; height: 75%; outline: 8px solid #555; border-radius: 20%;">
+            <div id="my_dataviz" style="visibility: visible; position: absolute; top: 5%; left: 13%;"></div>
+<!--            <canvas id="canvas" style="position: absolute; top: 5%; left: 62%; background-color: black;" height="480%" width="200%"></canvas>-->
+            <table style="visibility: hidden; position: absolute; top: 10%; left: 40%;">
+                <tr>
+                    <th>Height</th>
+                    <th>Pressure</th>
+                </tr>
+            </table>
 <!--            <div class="row" style="border-bottom: solid; border-color: #f5ce42; border-width: 20px;">-->
 <!--                <h3>Wolfram widget for calculation</h3>-->
 <!--                <script type="text/javascript" id="WolframAlphaScript65884a38afa3e9a51770a396918fd5f" src="//www.wolframalpha.com/widget/widget.jsp?id=65884a38afa3e9a51770a396918fd5f"></script>-->
@@ -63,6 +78,8 @@
 </body>
 <script src="Javascript\solution.js"></script>
 <script src="Javascript\navbar.js"></script>
+<script src="Javascript\solutionGraph.js"></script>
+<script src="Javascript\solutionControl.js"></script>
 <script>
     function myFunction()
     {
