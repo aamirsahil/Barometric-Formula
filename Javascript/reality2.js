@@ -1,16 +1,15 @@
-var value = localStorage.getItem("value");
-console.log(value);
+var value = 1;
 
 if(value == 1)
 {
     document.getElementById("img01").src = "images\\reality\\mountainClimbing.jpg";
     document.getElementById("img02").src = "images\\reality\\climber2.jpg";
     document.getElementById("img03").src = "images\\reality\\climber3.jpg";
-    document.getElementById("img04").src = "images\\reality\\climber4.jpg";
+    document.getElementById("img04").src = "images\\reality\\nosebleed.webp";
     document.getElementById("text01").innerHTML = "The mountain climber wants to know how atmospheric pressure effects her physiological changes.";
     document.getElementById("text02").innerHTML = "What happens here is a balance between her blood pressure and atmospheric pressure.";
     document.getElementById("text03").innerHTML = "The blood pressure is controlled by her body.";
-    document.getElementById("text04").innerHTML = "The atmospheric pressure is independent of her presence and is what we will look into now.";
+    document.getElementById("text04").innerHTML = "This disparity in pressure causes the nosebleed experienced by the mountain climbers";
 }
 else if(value == 2)
 {
