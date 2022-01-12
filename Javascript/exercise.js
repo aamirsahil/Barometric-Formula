@@ -25,6 +25,7 @@ d3.select("#next").on("click", function()
         i = 0;
         setQuestion();
         setHint();
+        setButton();
     }
 });
 
@@ -36,6 +37,7 @@ d3.select("#prev").on("click", function()
         i = 0;
         setQuestion();
         setHint();
+        setButton();
     }
 });
 
@@ -73,4 +75,14 @@ function hintVisibility()
             document.getElementById("hint3").style.visibility = "visible";
             document.getElementById("button").style.visibility = "hidden";
     }
+}
+function setButton(){
+    if(index<1)
+        document.getElementById("prev").className = 'btn btn-secondary';
+    else if(index > 1)
+        document.getElementById("next").className = 'btn btn-secondary';
+   else{
+    document.getElementById("prev").className = 'btn btn-primary';
+    document.getElementById("next").className = 'btn btn-primary';
+   }
 }

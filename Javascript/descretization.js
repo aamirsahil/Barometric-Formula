@@ -23,6 +23,7 @@ d3.select('#myRange').on("input",function(){
     else if(length > 2/7 && length < 3/7){
 //        check = true;
         document.getElementById("img01").src = "images\\Descretization\\02.png";
+        document.getElementById("marker1").style.fill = "#5999e3";
         document.getElementById("point01").style.visibility = "visible";
         document.getElementById("point02").style.visibility = "hidden";
         document.getElementById("point03").style.visibility = "hidden";
@@ -32,6 +33,7 @@ d3.select('#myRange').on("input",function(){
     else if(length > 3/7 && length < 4/7){
 //        check = true;
         document.getElementById("img01").src = "images\\Descretization\\03.png";
+        document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("point01").style.visibility = "visible";
         document.getElementById("point02").style.visibility = "visible";
         document.getElementById("point03").style.visibility = "hidden";
@@ -41,6 +43,7 @@ d3.select('#myRange').on("input",function(){
     else if(length > 4/7 && length < 5/7){
 //        check = true;
         document.getElementById("img01").src = "images\\Descretization\\04.png";
+        document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("point01").style.visibility = "visible";
         document.getElementById("point02").style.visibility = "visible";
         document.getElementById("point03").style.visibility = "visible";
@@ -50,6 +53,7 @@ d3.select('#myRange').on("input",function(){
     else if(length > 5/7 && length < 6/7){
 //        check = true;
         document.getElementById("img01").src = "images\\Descretization\\05.png";
+        document.getElementById("marker4").style.fill = "#5999e3";
         document.getElementById("point01").style.visibility = "visible";
         document.getElementById("point02").style.visibility = "visible";
         document.getElementById("point03").style.visibility = "visible";
@@ -59,6 +63,7 @@ d3.select('#myRange').on("input",function(){
     else if(length > 6/7 && length < 6.9/7){
 //        check = true;
         document.getElementById("img01").src = "images\\Descretization\\06.png";
+        document.getElementById("marker5").style.fill = "#5999e3";
         document.getElementById("point01").style.visibility = "visible";
         document.getElementById("point02").style.visibility = "visible";
         document.getElementById("point03").style.visibility = "visible";
@@ -68,6 +73,7 @@ d3.select('#myRange').on("input",function(){
     else if(length > 6.9/7){
 //        check = true;
         document.getElementById("img01").src = "images\\Descretization\\07.png";
+        document.getElementById("marker6").style.fill = "#5999e3";
     }
 })
 

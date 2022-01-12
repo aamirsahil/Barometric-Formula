@@ -17,13 +17,22 @@ for(let i = 1; i < 10; i++)
 // Element display on click
     d3.select("#pe" + i.toString()).on("click",function()
     {
+        activateButton();
         let svg = new SVG();
         svg.drawPElementSelect(i);
 // Take care of table entries(function defined at forceTable.js
 //        tableValues(i);
         pointLine(svg.line0, i);
         drawBorder(svg.border, i);
+        document.querySelectorAll("animate").forEach(element => {
+        element.beginElement();
+        });
     });
+}
+function activateButton(){
+    document.getElementById("derivation").disabled = false;
+    document.getElementById("derivation").innerHTML = "Go to Derivation";
+    document.getElementById("derivation").className = 'btn btn-primary';
 }
 function drawBorder(border, i)
 {
@@ -165,6 +174,7 @@ SVG.prototype.drawLine = function(i)
     this.line.setAttribute('y1','25');
     this.line.setAttribute('x2','148');
     this.line.setAttribute('y2','75');
+    document.getElementById('dz').style.visibility = "visible";
 }
 
 SVG.prototype.setCircle = function()

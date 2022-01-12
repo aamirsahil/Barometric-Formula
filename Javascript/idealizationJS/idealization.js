@@ -1,5 +1,4 @@
 d3.select('#myRange02').on("input",function(){
-
     let value = d3.select(this).property("value");
     let max = d3.select(this).property("max");
     let min = d3.select(this).property("min");
@@ -17,15 +16,18 @@ function setAxisSelection(length)
     if(length < 5.7/6)
         document.getElementById("selection").style.zIndex = "0";
     else
-        document.getElementById("selection").style.zIndex = "15";
+        document.getElementById("selection").style.zIndex = "25";
 }
 
 function setAnim(length)
 {
     if(length < (1/6)){
+        document.getElementById("cloud").style.webkitAnimationPlayState = "running";
         document.getElementById("earth").style.webkitAnimationPlayState = "running";
     }
     else if(length > (1/6) && length < (2/6)){
+        document.getElementById("cloud").style.webkitAnimationPlayState = "paused";
+        document.getElementById("cloud").style.webkitAnimationTimingFunction = "cubic-bezier(0,0,1,1)";
         document.getElementById("earth").style.webkitAnimationPlayState = "paused";
         document.getElementById("earth").style.webkitAnimationTimingFunction = "cubic-bezier(0,0,1,1)";
     }
@@ -34,6 +36,8 @@ function setAnim(length)
 function setImage(length)
 {
     document.getElementById("earth").style.opacity = opacity(length,2.7/6,3/6).toString() + "%";
+    document.getElementById("space").style.opacity = opacity(length,2.8/6,3/6).toString() + "%";
+    document.getElementById("cloud").style.opacity = opacity(length,2.8/6,3/6).toString() + "%";
     document.getElementById("atmos1").style.opacity = opacity(length,3/6,4/6).toString() + "%";
     document.getElementById("atmos2").style.opacity = opacity(length,4/6,5.9/6).toString() + "%";
     document.getElementById("atmos3").style.opacity = opacity(length,5.9/6,1).toString() + "%";
@@ -54,19 +58,24 @@ function setText(length)
         document.getElementById("idealExp").innerHTML = "We need to make approximations.";
     }
     else if(length > (1/6) && length < (2/6)){
+        document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("idealExp").innerHTML = "Rotation of the Earth discarded";
     }
     else if(length > (2/6) && length < (3/6)){
+        document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("idealExp").innerHTML = "Curvature of the earth discarded";
         setZoomCurve(length);
     }
     else if(length > (3/6) && length < (4/6)){
+        document.getElementById("marker4").style.fill = "#5999e3";
         document.getElementById("idealExp").innerHTML = "No heat source or sink present";
     }
     else if(length > (4/6) && length < (5/6)){
+        document.getElementById("marker5").style.fill = "#5999e3";
         document.getElementById("idealExp").innerHTML = "We need gravity because it is essential";
     }
     else if(length >= (5/6) && length < (5.9/6)){
+        document.getElementById("marker6").style.fill = "#5999e3";
         document.getElementById("idealExp").innerHTML = "Atmosphere is assumed to be homogenous";
     }
     else if(length >= (5.7/6)){
@@ -76,10 +85,22 @@ function setText(length)
 
 function setZoomCurve(length)
 {
+    let len = (length - 2/6) * 6;
+    let top = len * 90 - 3;
     let radius = -180*length + 110;
-    let zoom = 5400*length - 700;
-    document.getElementById("earth").style.borderRadius = radius.toString() + "%";
+//    let zoom = 5400*length - 700;
+    let dim = 300 * len + 100;
+    let left = -150*len;
+    let zoom = 2400 * len + 1100;
+
     document.getElementById("earth").style.backgroundSize = zoom.toString() + "px";
+    document.getElementById("earth").style.height = dim.toString() + "%";
+    document.getElementById("earth").style.width = dim.toString() + "%";
+    document.getElementById("earthContainer").style.borderRadius = radius.toString() + "%";
+    document.getElementById("earth").style.top = top.toString() + "%";
+    document.getElementById("earth").style.left = left.toString() + "%";
+    document.getElementById("space").style.borderRadius = radius.toString() + "%";
+    document.getElementById("cloud").style.borderRadius = radius.toString() + "%";
     document.getElementById("atmos1").style.borderRadius = radius.toString() + "%";
     document.getElementById("atmos2").style.borderRadius = radius.toString() + "%";
     document.getElementById("atmos3").style.borderRadius = radius.toString() + "%";
