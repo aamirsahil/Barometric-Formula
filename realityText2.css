@@ -7,11 +7,11 @@ position: relative;
 #img01, #img02, #img03, #img04{
 border: 8px solid #555;
  height: 45%;
-  width:90%;
-  border-radius: 30%;
+  width:85%;
+  border-radius: 50%;
   position:absolute;
   left: 20px;
-  top: 25px;
+  top: 10px;
 }
 #img02, #img03, #img04, #text02, #text03, #text04, #next02, #next03, #idealize{
     visibility: hidden;
@@ -19,13 +19,13 @@ border: 8px solid #555;
 .col-md-3 .content {
     text-align: center;
       position: absolute; /* Position the background text */
-      top: 51%; /* At the bottom. Use top:0 to append it to the top */
-      left: 50px;
+      top: 35%; /* At the bottom. Use top:0 to append it to the top */
+      left: 8px;
       background: rgb(0, 0, 0); /* Fallback color */
       background: rgba(0, 0, 0, 0.75); /* Black background with 0.5 opacity */
       color: #f1f1f1; /* Grey text */
-      width: 75%;
-      height: 20%;
+      width: 90%;
+      height: 15%;
       padding: 20px; /* Some padding */
 }
 .next:hover {

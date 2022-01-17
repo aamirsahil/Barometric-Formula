@@ -1,9 +1,11 @@
 body {
   overflow: hidden;
+  
+  
 }
 html {
   border-style: solid;
-  border-color: #f5ce42;
+  border-color: #b3fff9;
   height: 100%;
   width: 100%;
   border-width: 20px;

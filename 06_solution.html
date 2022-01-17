@@ -19,7 +19,7 @@
 <body>
 <div class="container-fluid">
 <!--    Navigation Bar  -->
-    <div class="row" style="position:relative; border-bottom: solid; border-color: #f5ce42; border-width: 20px; background-color: #f5ce42;">
+    <div class="row" style="position:relative; border-bottom: solid; border-color: #b3fff9; border-width: 20px; background-color: #b3fff9;">
         <div class="col-md-1" style="position: relative;"><a href="01_overview.html"><img style="z-index:2; left: 0; top: 7px; position: absolute;height:60%; width:70%" src="images\navbar\start.png" alt="dummy.jpg"></a></div>
         <div class="col-md-2"><a href="02_reality.html"><img id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
         <div class="col-md-2"><a href="03_idealization.html"><img id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
@@ -31,7 +31,6 @@
             <path d="M -120 1.5 H 46" stroke="black" stroke-width="1" style="stroke-opacity: 70%;"></path>
         </svg>
     </div>
-
 <!--    Navigation Bar(close)  -->
 <!--    Main Body  -->
     <div class="row">
@@ -43,25 +42,23 @@
         </div>
 <!--        Derivation(close)  -->
 <!--        WolframAlpha  -->
-        <div class="col-md-6 vh-100" style="background-color: #f5ce42; text-align: center; position: relative;">
+        <div class="col-md-6 vh-100" style="background-color: #b3fff9; text-align: center; position: relative;">
 <!--            <div id="borderLeft" class="border" style="top: 30%; left: 5%;">-->
 <!--                <div class="arrow left"></div>-->
 <!--            </div>-->
 <!--            <div id="borderRight" class="border" style="top: 30%; right: 0%;">-->
 <!--                <div class="arrow right"></div>-->
 <!--            </div>-->
-            <iframe width="400px" height="400px" src="https://ravi312.github.io/atm-pressure/"></iframe>
-            <img src="images\graph.png" id="graph" style="visibility: hidden; position: absolute; top: 10px; left: 113px; width: 75%; height: 75%; outline: 8px solid #555; border-radius: 20%;">
-            <div id="my_dataviz" style="visibility: visible; position: absolute; top: 5%; left: 13%;">
-                
-            </div>
+            <iframe style="position: absolute; top: 5%; left:10%;" width="600px" height="500px" src="https://ravi312.github.io/atm-pressure/"></iframe>
+            <!-- <img src="images\graph.png" id="graph" style="visibility: hidden; position: absolute; top: 10px; left: 113px; width: 75%; height: 75%; outline: 8px solid #555; border-radius: 20%;">
+            <div id="my_dataviz" style="visibility: visible; position: absolute; top: 5%; left: 13%;"></div> -->
 <!--            <canvas id="canvas" style="position: absolute; top: 5%; left: 62%; background-color: black;" height="480%" width="200%"></canvas>-->
-            <table style="visibility: hidden; position: absolute; top: 10%; left: 40%;">
+            <!-- <table style="visibility: hidden; position: absolute; top: 10%; left: 40%;">
                 <tr>
                     <th>Height</th>
                     <th>Pressure</th>
                 </tr>
-            </table>
+            </table> -->
 <!--            <div class="row" style="border-bottom: solid; border-color: #f5ce42; border-width: 20px;">-->
 <!--                <h3>Wolfram widget for calculation</h3>-->
 <!--                <script type="text/javascript" id="WolframAlphaScript65884a38afa3e9a51770a396918fd5f" src="//www.wolframalpha.com/widget/widget.jsp?id=65884a38afa3e9a51770a396918fd5f"></script>-->
@@ -78,15 +75,12 @@
 <!--        WolframAlpha(close)  -->
     </div>
 <!--    Main Body(close)  -->
-
 </div>
-
 </body>
 <script src="Javascript\solution.js"></script>
 <script src="Javascript\navbar.js"></script>
 <script src="Javascript\solutionGraph.js"></script>
 <script src="Javascript\solutionControl.js"></script>
-
 <script>
     function myFunction()
     {

@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="realityText.css">
+    <link rel="stylesheet" href="realityText2.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
 <body>
 <div class="container-fluid">
 <!--    The Navigation Bar  -->
-    <div class="row" style="position:relative; border-bottom: solid; border-color: #f5ce42; border-width: 20px; background-color: #f5ce42;">
+    <div class="row" style="position:relative; border-bottom: solid; border-color: #b3fff9; border-width: 20px; background-color: #b3fff9;">
         <div class="col-md-1" style="position: relative;"><a href="01_overview.html"><img style="z-index:2; left: 0; top: 7px; position: absolute;height:60%; width:70%" src="images\navbar\start.png" alt="dummy.jpg"></a></div>
         <div class="col-md-2"><a href="#"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
         <div class="col-md-2"><a href="03_idealization.html"><img id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
@@ -29,25 +30,72 @@
         </svg>
     </div>
 <!--    The Navigation Bar(close)  -->
-    <div class="row"  style="height: 105px; border-bottom: solid; border-color: #f5ce42; border-width: 20px;">
+    <div class="row"  style="height: 130px; border: solid; border-color: #83a5a2; border-width: 5px;">
         <div class="col-md-12 vh-100">
-            <h1>Reality</h1><span>A derivation is a process of finding relationship between quantifiable parameters.
-            For this we first need to look at real life instances which could motivate us to derive the formula.</span>
+            <h1>Starting with Reality</h1><span style="font-size: 1.4rem;">A person travelling to a high altitude region/a
+                 mountain climber wants to know the variation of atmospheric pressure with height
+                .</span>
         </div>
     </div>
-    <div class="row" style="background-color: #f5ce42;">
-        <div class="col-md-2"></div>
-        <div class="col-md-4 vh-100">
-            <img id="img01" src="images\reality\mountainClimbing.jpg">
+
+    <div class="row" id="img_row" style="background-color: #b3fff9;">
+        <div class="col-md-3 vh-100">
+            <img id="img01">
+            <div class="content" id="text01"></div>
+            <div id="next01" class="next">NEXT</div>
         </div>
-        <div class="col-md-6 vh-100">
-            <div class="content" id="text01" style="position: relative;">
-                <h1>Mountain Climber</h1>
-                <p>A Mountain climber would like to know how the atmospheric pressure changes
-                with height since it will have physiological effect on her.</p>
-                <button style="position: absolute; top: 75%; bottom: 10%;" id="click01" type="button" class="btn btn-primary" onclick="window.location='02_reality2.html';">Click Me</button>
-            </div>
+        <div class="col-md-3 vh-100">
+            <img id="img02">
+            <div class="content" id="text02"></div>
+            <div id="next02" class="next">NEXT</div>
         </div>
+        <div class="col-md-3 vh-100">
+            <img id="img03">
+            <div class="content" id="text03"></div>
+            <div id="next03" class="next">NEXT</div>
+        </div>
+        <div class="col-md-3 vh-100">
+            <img id="img04">
+            <div class="content" id="text04"></div>
+        </div>
+    </div>
+    <div class="row" id="idealize" style="position: relative;text-align: center;height: 87px; border: solid; border-color: #83a5a2; border-width: 5px; visibility:hidden;">
+        <div class="col-md-12 vh-100">
+            <b><span style="font-size: 1.5rem;">To mathematically model the variation of  atmospheric
+                 pressure let us first idealise the system !</span></b>
+        </div>
+        <a href="03_idealization.html" style="position: absolute; bottom: 1px; width: 25%; left: 37.5%;"
+        class="btn btn-success" type="button">Lets Idealize the system</a>
+    </div>
+</div>
+</body>
+<script src="Javascript\navbar.js"></script>
+<script src="Javascript\reality.js"></script>
+<script src="Javascript\reality2.js"></script>
+</html>
+
+
+<!-- <h1 id="hey"></h1>
+<div class="d-grid" style="left:400px; width: 50%; position: absolute; bottom: 10px;">
+  
+</div> -->
+
+<!-- <div class="row" style="background-color: #b3fff9;">
+    <div class="col-md-2"></div>
+    <div class="col-md-4 vh-100">
+        <img id="img01" src="images\reality\mountainClimbing.jpg">
+    </div>
+    <div class="col-md-6 vh-100">
+        <div class="content" id="text01" style="position: relative;">
+            <h1>Mountain Climber</h1>
+            <p>A Mountain climber would like to know how the atmospheric pressure changes
+            with height since it will have physiological effect on her.</p>
+            <button style="position: absolute; top: 75%; bottom: 10%;" id="click01" type="button" class="btn btn-primary" onclick="window.location='02_reality2.html';">Click Me</button>
+        </div>
+    </div>
+
+</div> -->
+
 <!--        <div class="col-md-4 vh-100">-->
 <!--            <img id="img02" src="images\reality\boiling.jpg">-->
 <!--            <div class="content" id="text02"></div>-->
@@ -58,12 +106,7 @@
 <!--            <div class="content" id="text03"></div>-->
 <!--            <button id="click03" type="button" class="btn btn-primary" onclick="window.location='02_reality2.html';">Click Me</button>-->
 <!--        </div>-->
-    </div>
+
 <!--    <div class="d-grid" style="left:400px; width: 50%; position: absolute; top: 660px;">-->
 <!--      <a href="03_idealization.html" class="btn btn-dark" type="button">Lets Idealize the System</a>-->
 <!--    </div>-->
-</div>
-</body>
-<script src="Javascript\navbar.js"></script>
-<script src="Javascript\reality.js"></script>
-</html>
