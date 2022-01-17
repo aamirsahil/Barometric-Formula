@@ -58,7 +58,9 @@ function turnVisible(i)
     {
         let idealize = document.getElementById("idealize");
         idealize.style.visibility = "visible";
-        document.getElementById("img_row").style.height = "360px";
+        let height = window.innerHeight - 355;
+        console.log(height);
+        document.getElementById("img_row").style.height = height.toString() + "px";
     }
     if(i == 4)
     {
