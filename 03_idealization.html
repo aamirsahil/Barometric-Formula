@@ -18,7 +18,7 @@
 
 <div class="container-fluid">
 <!--    The Navigation Bar  -->
-    <div class="row" style="position:relative; border-bottom: solid; border-color: #b3fff9; border-width: 20px; background-color: #b3fff9">
+    <div class="row" style="position:relative; border-bottom: solid; border-color: #e8eefa;; border-width: 20px; background-color: #e8eefa;">
         <div class="col-md-1" style="position: relative;"><a href="01_overview.html"><img style="z-index:2; left: 0; top: 7px; position: absolute;height:60%; width:70%" src="images\navbar\start.png" alt="dummy.jpg"></a></div>
         <div class="col-md-2"><a href="02_reality.html"><img id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
         <div class="col-md-2"><a href="#"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
@@ -34,18 +34,49 @@
 <!--    Main Body  -->
     <div class="row">
 <!--    Left Hand Column(Blood pressure vs Atmospheric pressure)  -->
-        <div class="col-md-5 vh-100" style="border-right: solid; border-color: #b3fff9; border-width: 20px;">
+        <div class="col-md-5 vh-100" style="border-right: solid;border-right: solid; border-color: #e8eefa;; border-width: 20px;">
             <h1>Idealization</h1>
-            <ul style="font-size: 1.3rem;">
-                <li>Here we strip away details we consider unnecessary to solving the problem at hand. </li>
+            <ul style="font-size: 1.4rem;">
+                <li>Here we strip away details we consider unnecessary to solving the problem at hand.</li>
                 <li>We consider atmosphere as a column of air.</li>
                 <li>Features like rotation of earth, curvature of earth’s surface,  presence of a heat source, composition of air etc are ignored.</li>
                 <li>Drag the slider to view the process of idealization</li>
             </ul>
+            <div class="row v-h100" style="text-align: center;">
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" id="rotBt">Rotation</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" id="curBt">Curvature</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" id="htBt">Heat Source</button>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary" id="airBt">Air composition</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" id="grBt">Gravity</button>
+                </div>
+            </div>
+            <div class="slidecontainer" style="position: absolute; bottom: 10%; z-index: 20; width: 38%; padding-top: 27px;">
+                <input style=" z-index: 20; width: 100%;" type="range" min="0" max="100" value="0" class="slider" id="myRange02" autocomplete="off">
+              </div>
+              <svg width="200%" height="50%" viewBox="0 0 200 50" id="svg" style="z-index: 0; position: absolute;top: 81%; left:-52%;">
+                  <defs>
+                      <path id="marker" stroke-linecap="round" d="M 0 0 H 4 L 2 4"/>
+                  </defs>
+                  <use xlink:href="#marker" id="marker1" fill="#5999e3" x="0" y="0"/>
+                  <use xlink:href="#marker" id="marker2" fill="#a6a5a2" x="15" y="0"/>
+                  <use xlink:href="#marker" id="marker3" fill="#a6a5a2" x="40" y="0"/>
+                  <use xlink:href="#marker" id="marker4" fill="#a6a5a2" x="56" y="0"/>
+                  <use xlink:href="#marker" id="marker5" fill="#a6a5a2" x="68" y="0"/>
+                  <use xlink:href="#marker" id="marker6" fill="#a6a5a2" x="78" y="0"/>
+              </svg>
         </div>
 <!--        Left Hand Column(close)  -->
 <!--        Center Column(System)  -->
-        <div class="col-md-6" style="position: relative; text-align: center; background-color: #b3fff9;">
+        <div class="col-md-7" style="position: relative; text-align: center; background-color: #e8eefa;">
             <div id="container">
                 <div id="cloud"></div>
                 <div id="earthContainer"><div id="earth"></div></div>
@@ -57,42 +88,13 @@
                 <div id="selection" style="cursor: pointer;" onclick="window.location='04_descretization.html';"></div>
             </div>
             <br>
-            <div class="slidecontainer" style="position: absolute; bottom: 20%; z-index: 20; width: 100%; padding-top: 27px;">
-              <input style=" z-index: 20; width: 100%;" type="range" min="0" max="100" value="0" class="slider" id="myRange02" autocomplete="off">
-            </div>
-            <svg width="200%" height="50%" viewBox="0 0 200 50" id="svg" style="z-index: 0; position: absolute;top: 73%; left:-4%;">
-                <defs>
-                    <path id="marker" stroke-linecap="round" d="M 0 0 H 4 L 2 4"/>
-                </defs>
-                <use xlink:href="#marker" id="marker1" fill="#5999e3" x="0" y="0"/>
-                <use xlink:href="#marker" id="marker2" fill="#a6a5a2" x="20" y="0"/>
-                <use xlink:href="#marker" id="marker3" fill="#a6a5a2" x="40" y="0"/>
-                <use xlink:href="#marker" id="marker4" fill="#a6a5a2" x="60" y="0"/>
-                <use xlink:href="#marker" id="marker5" fill="#a6a5a2" x="80" y="0"/>
-                <use xlink:href="#marker" id="marker6" fill="#a6a5a2" x="100" y="0"/>
-            </svg>
-            <b><p id="idealExp" style="font-size: 20px;">We need to make approximations.</p></b>
+            <b><p id="idealExp" style="font-size: 20px;"></p></b>
         </div>
-        <div class="col-md-1" style="background-color: #b3fff9;">
+        <!-- <div class="col-md-1" style="background-color: #b3fff9;"> -->
 <!--            <div class="row v-h100" style="padding-top: 35px;">-->
 <!--                <b><h2>Parameters</h2></b>-->
 <!--            </div>-->
-            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
-                <button type="button" class="btn btn-primary" id="rotBt">Rotation</button>
-            </div>
-            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
-                <button type="button" class="btn btn-primary" id="curBt">Curvature</button>
-            </div>
-            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
-                <button type="button" class="btn btn-primary" id="htBt">Heat Source</button>
-            </div>
-            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
-                <button type="button" class="btn btn-primary" id="grBt">Gravity</button>
-            </div>
-            <div class="row v-h100" style="padding-top: 35px; padding-right: 3px;">
-                <button type="button" class="btn btn-primary" id="airBt">Composition of Air</button>
-            </div>
-        </div>
+
 <!--        Center Column(close)  -->
 <!--&lt;!&ndash;        Right Hand Column(Cooking)  &ndash;&gt;-->
 <!--        <div class="col-md-3 vh-100" style="text-align: center; border-left: solid; border-color: #f5ce42; border-width: 20px;">-->
