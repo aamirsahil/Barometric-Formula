@@ -55,28 +55,28 @@ function opacity(length,min,max)
 function setText(length)
 {
     if(length < (1/6)){
-        document.getElementById("idealExp").innerHTML = "We need to make approximations.";
+        document.getElementById("idealExp").innerHTML = "";
     }
     else if(length > (1/6) && length < (2/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
-        document.getElementById("idealExp").innerHTML = "Rotation of the Earth discarded";
+        document.getElementById("idealExp").innerHTML = "Rotation of the earth is discarded";
     }
-    else if(length > (2/6) && length < (3/6)){
+    else if(length > (2/6) && length < (4/6)){
         document.getElementById("marker3").style.fill = "#5999e3";
-        document.getElementById("idealExp").innerHTML = "Curvature of the earth discarded";
+        document.getElementById("idealExp").innerHTML = "Curvature of the earth is discarded";
         setZoomCurve(length);
     }
-    else if(length > (3/6) && length < (4/6)){
-        document.getElementById("marker4").style.fill = "#5999e3";
-        document.getElementById("idealExp").innerHTML = "No heat source or sink present";
-    }
     else if(length > (4/6) && length < (5/6)){
-        document.getElementById("marker5").style.fill = "#5999e3";
+        document.getElementById("marker4").style.fill = "#5999e3";
+        document.getElementById("idealExp").innerHTML = "Ignored presence of heat source or sink.";
+    }
+    else if(length > (5/6) && length < (5.5/6)){
+        document.getElementById("marker5").style.fill = "#eb545c";
         document.getElementById("idealExp").innerHTML = "We need gravity because it is essential";
     }
-    else if(length >= (5/6) && length < (5.9/6)){
+    else if(length >= (5.5/6) && length < (5.9/6)){
         document.getElementById("marker6").style.fill = "#5999e3";
-        document.getElementById("idealExp").innerHTML = "Atmosphere is assumed to be homogenous";
+        document.getElementById("idealExp").innerHTML = "Assumed uniform composition of air.";
     }
     else if(length >= (5.7/6)){
         document.getElementById("idealExp").innerHTML = "Now we can consider the system as a column of air";
@@ -115,18 +115,19 @@ function setBtn(length)
         document.getElementById("rotBt").setAttribute("class","btn btn-secondary");
         resetButton(0);
     }
-    else if(length > (2/6) && length < (3/6)){
+    else if(length > (2/6) && length < (4/6)){
         document.getElementById("curBt").setAttribute("class","btn btn-secondary");
         resetButton(1);
     }
-    else if(length > (3/6) && length < (4/6)){
+    else if(length > (4/6) && length < (5/6)){
         document.getElementById("htBt").setAttribute("class","btn btn-secondary");
         resetButton(2);
     }
-    else if(length > (4/6) && length < (5/6)){
+    else if(length > (5/6) && length < (5.5/6)){
+        document.getElementById("grBt").setAttribute("class","btn btn-danger");
         resetButton(3);
     }
-    else if(length >= (5/6) && length < (5.9/6)){
+    else if(length >= (5.5/6) && length < (5.9/6)){
         document.getElementById("airBt").setAttribute("class","btn btn-secondary");
         resetButton(4);
     }

@@ -7,9 +7,9 @@ if(value == 1)
     document.getElementById("img03").src = "images\\reality\\climber3.jpg";
     document.getElementById("img04").src = "images\\reality\\nosebleed.webp";
     document.getElementById("text01").innerHTML = "The mountain climber wants to know how atmospheric pressure effects her physiological changes.";
-    document.getElementById("text02").innerHTML = "There is a balance between our blood pressure and atmospheric pressure";
-    document.getElementById("text03").innerHTML = "The blood pressure is controlled by our body.";
-    document.getElementById("text04").innerHTML = "Any disparity in pressure causes physiological effects like nose bleeding";
+    document.getElementById("text02").innerHTML = "What happens here is a balance between her blood pressure and atmospheric pressure.";
+    document.getElementById("text03").innerHTML = "The blood pressure is controlled by her body.";
+    document.getElementById("text04").innerHTML = "This disparity in pressure causes the nosebleed experienced by the mountain climbers";
 }
 else if(value == 2)
 {
@@ -58,7 +58,7 @@ function turnVisible(i)
     {
         let idealize = document.getElementById("idealize");
         idealize.style.visibility = "visible";
-        let height = window.innerHeight - 355;
+        let height = window.innerHeight - 350;
         console.log(height);
         document.getElementById("img_row").style.height = height.toString() + "px";
     }
