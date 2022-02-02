@@ -33,15 +33,14 @@
 <div class="container-fluid">
 <!--    Navigation Bar  -->
     <div class="row" style="position:relative; border-bottom: solid; border-color: #e8eefa;; border-width: 20px; background-color: #e8eefa;;">
-        <div class="col-md-1" style="position: relative;"><a href="01_overview.html"><img style="opacity: 50%;z-index:2; left: 0; top: 7px; position: absolute;height:60%; width:70%" src="images\navbar\tifr-logo-black.png" alt="dummy.jpg"></a></div>
+        <div class="col-md-2" style="position: relative;"><a href="01_overview.html"><img style="opacity: 50%;z-index:2; left: 0; top: 7px; position: absolute;height:60%; width:40%" src="images\navbar\tifr-logo-black.png" alt="dummy.jpg"></a></div>
         <div class="col-md-2"><a href="02_reality.html"><img id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
         <div class="col-md-2"><a href="03_idealization.html"><img id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
         <div class="col-md-2"><a href="04_descretization.html"><img id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
         <div class="col-md-2"><a href="#"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
         <div class="col-md-2"><a href="06_solution.html"><img id="img5" src="images\navbar\navbar05.png" alt="dummy.jpg"><div class="content" id="text5"></div></a></div>
-        <div class="col-md-1" style="position: relative;"></div>
-                <svg style="z-index: 1;top: 15px; position: absolute;" width="100%" height="20px" viewBox="0 0 6 2">
-            <path d="M -53 1.5 H 21.5" stroke="black" stroke-width="1" style="stroke-opacity: 70%;"></path>
+        <svg style="z-index: 1;top: 15px; position: absolute;" width="100%" height="20px" viewBox="0 0 6 2">
+            <path d="M -40 1.5 H 31.5" stroke="black" stroke-width="1" style="stroke-opacity: 70%;"></path>
         </svg>
     </div>
 <!--    Navigation Bar(close)  -->
@@ -63,21 +62,23 @@
 <!--    Force Values(close)  -->
     <div class="row">
 <!--        Force Equation  -->
-        <div id="exp" class="col-md-6" style="font-size: 1.3em;">
+        <div id="exp" class="col-md-6" style="font-size: 1.25em;">
 <!--            Explanation  -->
-            <h1>The system on mathematical grid</h1>
+            <b><h1>Let us put the system on a coordinate system !</h1></b>
             <ul>
-                <li>The entire system is put in a 1D coordinate system(\(z\)), and vectors are introduced to represent forces.</li>
-                <li>Forces acting in this case are,(click on any pressure element in the picture),
-                    <ul>
-                        <li>Force from pressure element on top,$$ F_1 = P_{i+1} \times A $$</li>
-                        <li>Weight of the pressure element,$$ F_2 = \rho Agdz $$</li>
-                        <li>Force from pressure element below,$$ F_3 = P_{i} \times A $$</li>
-                    </ul>
+                <li>We put the the discretised column of atmosphere in a 1 D coordinate system.</li>
+                <li>We focus our analysis on one arbitrary column. Let A be its cross sectional area and \(dz\) the thickness.
+                    <b>(Click on any column to see the dynamics !)</b>
                 </li>
-                <li>Here \(A\) is the cross-section area of the pressure element and \(dz\) it's thickness</li>
+                <li id="force" style="visibility: hidden;">As can be seen, 3 forces are acting on the column.
+                    <ul>
+                        <li>Force due to atmospheric pressure from above,$$ F_1 = P_{i+1} \times A $$</li>
+                        <li>Force due to atmospheric pressure from above,$$ F_2 = \rho Agdz $$</li>
+                        <li>Force due to weight of the column of air,$$ F_3 = P_{i} \times A $$</li>
+                    </ul>
+                </li>   
             </ul>
-            <button autocomplete="off" id="derivation" type="button" class="btn btn-secondary" onclick="window.location='05_equilibrium2.html';" disabled>Click on one pressure element on the right</button>
+            <button autocomplete="off" id="derivation" type="button" style="float: right;visibility: hidden;" class="btn btn-primary" onclick="window.location='05_equilibrium2.html';" disabled>Go to Algebraic</button>
 <!--explanation.js will create the necessary elements  -->
 <!--            Explanation(end)  -->
 <!--            Derivation  -->
