@@ -6,11 +6,9 @@ if(value == 1)
     document.getElementById("img02").src = "images\\reality\\climber2.jpg";
     document.getElementById("img03").src = "images\\reality\\climber3.jpg";
     document.getElementById("img04").src = "images\\reality\\nosebleed.webp";
-    document.getElementById("text02").innerHTML = "Normally there is a balance between our blood pressure and atmospheric pressure.
-";
+    document.getElementById("text02").innerHTML = "Normally there is a balance between our blood pressure and atmospheric pressure.";
     document.getElementById("text03").innerHTML = "The blood pressure is controlled by our body.";
-    document.getElementById("text04").innerHTML = "A disparity in pressure can cause nosebleed, often experienced at higher altitudes
-.";
+    document.getElementById("text04").innerHTML = "A disparity in pressure can cause nosebleed, often experienced at higher altitudes.";
 }
 else if(value == 2)
 {

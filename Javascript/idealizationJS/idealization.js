@@ -71,7 +71,7 @@ function setText(length)
         document.getElementById("idealExp").innerHTML = "Ignored presence of heat source or sink.";
     }
     else if(length > (5/6) && length < (5.5/6)){
-        document.getElementById("marker5").style.fill = "#eb545c";
+        document.getElementById("marker5").style.fill = "MediumSeaGreen";
         document.getElementById("idealExp").innerHTML = "We need gravity because it is essential";
     }
     else if(length >= (5.5/6) && length < (5.9/6)){
@@ -124,7 +124,7 @@ function setBtn(length)
         resetButton(2);
     }
     else if(length > (5/6) && length < (5.5/6)){
-        document.getElementById("grBt").setAttribute("class","btn btn-danger");
+        document.getElementById("grBt").setAttribute("class","btn btn-success");
         resetButton(3);
     }
     else if(length >= (5.5/6) && length < (5.9/6)){

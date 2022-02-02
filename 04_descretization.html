@@ -6,6 +6,8 @@
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX","output/HTML-CSS"], tex2jax: { inlineMath: [["\\(","\\)"]] } }); </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -40,14 +42,11 @@
 <!--    Description  -->
         <div class="col-md-6" style="font-size:1.5rem;">
             <h1>Descretization</h1>
-            <p>Descretization basically means to divide the space into smaller elements such that physics is same
-            in all the individual elements</p>
+            <p>Here we discretize atmosphere!</p>
             <ul>
-                <li id="point01" style="visibility: hidden;">For starter we divide the space to descrete elements.</li>
-                <li id="point02" style="visibility: hidden;">Each element have a constant P,V,T values and is thus a equilibrium system.</li>
-                <li id="point03" style="visibility: hidden;">The boundary can exchange heat and mass.</li>
-                <li id="point04" style="visibility: hidden;">But since each element is equilibrium, the net transfer is 0.</li>
-                <li id="point05" style="visibility: hidden;">The model becomes closer to reality as the resolution of descretization sharpens</li>
+                <li id="point01" style="visibility: hidden;">We now consider the continuous column of air to be made of smaller discrete columns, each of height, \( \Delta h \)</li>
+                <li id="point02" style="visibility: hidden;">We assume each column to have constant P, V, T values and to be in equilibrium with neighbouring columns.</li>
+                <li id="point03" style="visibility: hidden;">Columns can exchange heat and mass, but the net transfer is zero.</li>
             </ul>
         </div>
 <!--        Description(close)  -->
@@ -64,11 +63,11 @@
                 <defs>
                     <path id="marker" stroke-linecap="round" d="M 0 0 H 4 L 2 4"/>
                 </defs>
-                <use xlink:href="#marker" id="marker1" fill="#a6a5a2" x="35" y="0"/>
-                <use xlink:href="#marker" id="marker2" fill="#a6a5a2" x="48" y="0"/>
-                <use xlink:href="#marker" id="marker3" fill="#a6a5a2" x="60" y="0"/>
-                <use xlink:href="#marker" id="marker4" fill="#a6a5a2" x="71" y="0"/>
-                <use xlink:href="#marker" id="marker5" fill="#a6a5a2" x="84" y="0"/>
+                <use xlink:href="#marker" id="marker1" fill="#5999e3" x="10" y="0"/>
+                <use xlink:href="#marker" id="marker2" fill="#a6a5a2" x="28" y="0"/>
+                <use xlink:href="#marker" id="marker3" fill="#a6a5a2" x="46" y="0"/>
+                <use xlink:href="#marker" id="marker4" fill="#a6a5a2" x="64" y="0"/>
+                <use xlink:href="#marker" id="marker5" fill="#a6a5a2" x="82" y="0"/>
                 <use xlink:href="#marker" id="marker6" fill="#a6a5a2" x="97" y="0"/>
             </svg>
         </div>
