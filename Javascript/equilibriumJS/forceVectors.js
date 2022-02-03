@@ -18,6 +18,7 @@ for(let i = 1; i < 10; i++)
     d3.select("#pe" + i.toString()).on("click",function()
     {
         activateButton();
+        activateText();
         let svg = new SVG();
         svg.drawPElementSelect(i);
 // Take care of table entries(function defined at forceTable.js
@@ -31,8 +32,10 @@ for(let i = 1; i < 10; i++)
 }
 function activateButton(){
     document.getElementById("derivation").disabled = false;
-    document.getElementById("derivation").innerHTML = "Go to Derivation";
-    document.getElementById("derivation").className = 'btn btn-primary';
+    document.getElementById("derivation").style.visibility = "visible";
+}
+function activateText(){
+    document.getElementById("force").style.visibility = "visible";
 }
 function drawBorder(border, i)
 {

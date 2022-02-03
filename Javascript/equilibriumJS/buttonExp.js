@@ -1,13 +1,5 @@
 var page = 1;
 var img = ["vectors1","vectors2","vectors3","vectors4","vectors5","vectors6","vectors7","vectors"];
-var textExp = ["We consider one pressure element",
-            "It has a weight due to gravity",
-            "It is also acted on by pressure from top",
-            "Hence force from top is sum of these 2 forces",
-            "This is countered from pressure from bottom",
-            "This is countered from pressure from bottom",
-            "At equilibrium the sum is zero",
-            "Which result sus th final expression"];
 $('#borderTop').on('click', () => {
     if(page < 2) return;
     page--;

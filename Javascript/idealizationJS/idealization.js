@@ -59,27 +59,21 @@ function setText(length)
     }
     else if(length > (1/6) && length < (2/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
-        document.getElementById("idealExp").innerHTML = "Rotation of the earth is discarded";
     }
     else if(length > (2/6) && length < (4/6)){
         document.getElementById("marker3").style.fill = "#5999e3";
-        document.getElementById("idealExp").innerHTML = "Curvature of the earth is discarded";
         setZoomCurve(length);
     }
     else if(length > (4/6) && length < (5/6)){
         document.getElementById("marker4").style.fill = "#5999e3";
-        document.getElementById("idealExp").innerHTML = "Ignored presence of heat source or sink.";
     }
     else if(length > (5/6) && length < (5.5/6)){
-        document.getElementById("marker5").style.fill = "#eb545c";
-        document.getElementById("idealExp").innerHTML = "We need gravity because it is essential";
+        document.getElementById("marker5").style.fill = "MediumSeaGreen";
     }
     else if(length >= (5.5/6) && length < (5.9/6)){
         document.getElementById("marker6").style.fill = "#5999e3";
-        document.getElementById("idealExp").innerHTML = "Assumed uniform composition of air.";
     }
     else if(length >= (5.7/6)){
-        document.getElementById("idealExp").innerHTML = "Now we can consider the system as a column of air";
     }
 }
 
@@ -124,7 +118,7 @@ function setBtn(length)
         resetButton(2);
     }
     else if(length > (5/6) && length < (5.5/6)){
-        document.getElementById("grBt").setAttribute("class","btn btn-danger");
+        document.getElementById("grBt").setAttribute("class","btn btn-success");
         resetButton(3);
     }
     else if(length >= (5.5/6) && length < (5.9/6)){

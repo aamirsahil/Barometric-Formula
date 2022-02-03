@@ -202,6 +202,20 @@ d3.select("#mySlider").on("input", function()
 
     if(length < 1/4)
     {
+        if(length < 1/8){
+            let image = document.getElementById("img");
+            image.src = "images/equilibrium/vectors6.png";
+            image.style.height = "65%";
+            image.style.top = "3%";
+            image.style.left = "30%";
+        }
+        else if(length < 2/8){
+            let image = document.getElementById("img");
+            image.src = "images/equilibrium/vectors7.png";
+            image.style.height = "65%";
+            image.style.top = "3%";
+            image.style.left = "30%";
+        }
         step2.style.visibility = "hidden";
         step3.style.visibility = "hidden";
         step4.style.visibility = "hidden";
