@@ -18,14 +18,14 @@
 
 <div class="container-fluid">
 <!--    The Navigation Bar  -->
-    <div class="row" style="position:relative; border-bottom: solid; border-color: #e8eefa;; border-width: 20px; background-color: #e8eefa;">
-        <div class="col-md-2" style="position: relative;"><a href="01_overview.html"><img style="opacity: 50%;z-index:2; left: 0; top: 7px; position: absolute;height:60%; width:40%" src="images\navbar\tifr-logo-black.png" alt="dummy.jpg"></a></div>
+    <div class="row navbar">
+        <div class="col-md-2 logo"><a href="01_overview.html"><img id="logo" src="images\navbar\tifr-logo-black.png" alt="dummy.jpg"></a></div>
         <div class="col-md-2"><a href="02_reality.html"><img id="img1" src="images\navbar\navbar01.jpg" alt="dummy.jpg"><div class="content" id="text1"></div></a></div>
-        <div class="col-md-2"><a href="#"><img style="outline: 6px solid #4f7eff; opacity: 100%;" id="img2" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
+        <div class="col-md-2"><a href="#"><img id="selected" src="images\navbar\navbar02.jpg" alt="dummy.jpg"><div class="content" id="text2"></div></a></div>
         <div class="col-md-2"><a href="04_descretization.html"><img id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
         <div class="col-md-2"><a href="05_equilibrium.html"><img id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
         <div class="col-md-2"><a href="06_solution.html"><img id="img5" src="images\navbar\navbar05.png" alt="dummy.jpg"><div class="content" id="text5"></div></a></div>
-        <svg style="z-index: 1;top: 15px; position: absolute;" width="100%" height="20px" viewBox="0 0 6 2">
+        <svg class="navSvg" width="100%" height="20px" viewBox="0 0 6 2">
             <path d="M -40 1.5 H -15" stroke="black" stroke-width="1" style="stroke-opacity: 70%;"></path>
         </svg>
     </div>
@@ -33,7 +33,7 @@
 <!--    Main Body  -->
     <div class="row">
 <!--    Left Hand Column(Blood pressure vs Atmospheric pressure)  -->
-        <div class="col-md-5 vh-100" style="border-right: solid;border-right: solid; border-color: #e8eefa;; border-width: 20px;">
+        <div class="col-md-6 vh-100" style="border-right: solid;border-right: solid; border-color: #e8eefa;; border-width: 20px;">
             <h1>Idealization</h1>
             <ul style="font-size: 1.4rem;">
                 <li>Here we strip away details we consider unnecessary to solving the problem at hand.</li>
@@ -42,21 +42,12 @@
                 <li>Drag the slider to view the process of idealization</li>
             </ul>
             <div class="row v-h100" style="text-align: center;">
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-primary" id="rotBt">Rotation</button>
-                </div>
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-primary" id="curBt">Curvature</button>
-                </div>
-                <div class="col-md-3">
-                    <button type="button" class="btn btn-primary" id="htBt">Heat Source</button>
-                </div>
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-primary" id="airBt">Air composition</button>
-                </div>
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-primary" id="grBt">Gravity</button>
-                </div>
+                    <button style="width:80px;" type="button" class="btn btn-primary" id="rotBt">Rotation</button>
+                    <button style="width:90px;" type="button" class="btn btn-primary" id="curBt">Curvature</button>
+                    <button style="width:110px;" type="button" class="btn btn-primary" id="htBt">Heat Source</button>
+                    <button style="width:80px;" type="button" class="btn btn-primary" id="grBt">Gravity</button>
+                    <button style="width:130px;" type="button" class="btn btn-primary" id="airBt">Air composition</button>
+                    
             </div>
             <div class="slidecontainer" style="position: absolute; bottom: 10%; z-index: 20; width: 38%; padding-top: 27px;">
                 <input style=" z-index: 20; width: 100%;" type="range" min="0" max="100" value="0" class="slider" id="myRange02" autocomplete="off">
@@ -75,7 +66,7 @@
         </div>
 <!--        Left Hand Column(close)  -->
 <!--        Center Column(System)  -->
-        <div class="col-md-7" style="position: relative; text-align: center; background-color: #e8eefa;">
+        <div class="col-md-6" style="position: relative; text-align: center; background-color: #e8eefa;">
             <div id="container">
                 <div id="cloud"></div>
                 <div id="earthContainer"><div id="earth"></div></div>
