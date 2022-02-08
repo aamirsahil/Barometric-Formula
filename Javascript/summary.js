@@ -1,44 +1,34 @@
-d3.select('#slider1').on("input",function(){
+var text = [];
 
-    let value = d3.select(this).property("value");
-    let max = d3.select(this).property("max");
-    let min = d3.select(this).property("min");
-    let length = value/(max - min);
+$("#arc-slider").roundSlider({
+    sliderType: "min-range",
+    circleShape: "custom-quarter",
+    value: 0,
+    startAngle: 45,
+    editableTooltip: true,
+    radius: 350,
+    width: 6,
+    handleSize: "+32",
+    tooltipFormat: function (args) {
+        return args.value + " %";
+    },
+    drag: function(args){
+        let text = document.getElementById("text");
 
-    setImage(length);
-    setText(length);
+        changeText(args.value/100);
+        changeImg(args.value/100);
+    }
 });
-var text = [
-    "We started with an real life example which we needed to model to obtain relation between relevant quantities.",
-    "Only the essential elements are kept and we idealized the system to study its relation.",
-    "The system is then divided into smaller elements such that the governing physics is same in each division.",
-    "The quantities are then described using mathematical elements.",
-    "Through analytical or numerical manipulation we obtain the relationship between the physical quantities under investigation."
-    ]
-function setText(length)
-{
-    if(length < 1/5)
-        document.getElementById('text').innerHTML = text[0];
-    else if(length > 1/5 && length < 2/5)
-        document.getElementById('text').innerHTML = text[1];
-    else if(length > 2/5 && length < 3/5)
-        document.getElementById('text').innerHTML = text[2];
-    else if(length > 3/5 && length < 4/5)
-        document.getElementById('text').innerHTML = text[3];
-    else
-        document.getElementById('text').innerHTML = text[4];
-}
 
-function setImage(length)
-{
-    if(length <= 1/5)
-        document.getElementById('summary').style.backgroundImage = "url(\"images/summary/summary01.jpg\")";
-    else if(length > 1/5 && length <= 2/5)
-        document.getElementById('summary').style.backgroundImage = "url(\"images/summary/summary02.jpg\")";
-    else if(length > 2/5 && length <= 3/5)
-        document.getElementById('summary').style.backgroundImage = "url(\"images/summary/summary03.png\")";
-    else if(length > 3/5 && length <= 4/5)
-        document.getElementById('summary').style.backgroundImage = "url(\"images/summary/summary04.png\")";
-    else
-        document.getElementById('summary').style.backgroundImage = "url(\"images/summary/summary05.png\")";
+function changeText(len){
+
+}
+function changeImg(len){
+    let img = document.getElementById("summary");
+    for(let i = 0; i <= 11; i++){
+        if(len > i/12 && len < (i+1)/12){
+            img.style.backgroundImage = "url(\"images/summary/0" + (i+1).toString() + ".png\")";
+            return;
+        } 
+    }
 }

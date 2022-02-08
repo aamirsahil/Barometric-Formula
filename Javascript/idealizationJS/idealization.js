@@ -9,6 +9,7 @@ d3.select('#myRange02').on("input",function(){
     setText(length);
     setBtn(length);
     setAxisSelection(length);
+    setZoomCurve(length);
 })
 
 function setAxisSelection(length)
@@ -25,7 +26,7 @@ function setAnim(length)
         document.getElementById("cloud").style.webkitAnimationPlayState = "running";
         document.getElementById("earth").style.webkitAnimationPlayState = "running";
     }
-    else if(length > (1/6) && length < (2/6)){
+    else if(length > 1/6){
         document.getElementById("cloud").style.webkitAnimationPlayState = "paused";
         document.getElementById("cloud").style.webkitAnimationTimingFunction = "cubic-bezier(0,0,1,1)";
         document.getElementById("earth").style.webkitAnimationPlayState = "paused";
@@ -54,23 +55,46 @@ function opacity(length,min,max)
 
 function setText(length)
 {
-    if(length < (1/6)){
-        document.getElementById("idealExp").innerHTML = "";
+    if(length < 1/6){
+        document.getElementById("marker2").style.fill = "#a6a5a2";
+        document.getElementById("marker3").style.fill = "#a6a5a2";
+        document.getElementById("marker4").style.fill = "#a6a5a2";
+        document.getElementById("marker5").style.fill = "#a6a5a2";
+        document.getElementById("marker6").style.fill = "#a6a5a2";
     }
     else if(length > (1/6) && length < (2/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
+        document.getElementById("marker3").style.fill = "#a6a5a2";
+        document.getElementById("marker4").style.fill = "#a6a5a2";
+        document.getElementById("marker5").style.fill = "#a6a5a2";
+        document.getElementById("marker6").style.fill = "#a6a5a2";
     }
     else if(length > (2/6) && length < (4/6)){
+        document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("marker3").style.fill = "#5999e3";
-        setZoomCurve(length);
+        document.getElementById("marker4").style.fill = "#a6a5a2";
+        document.getElementById("marker5").style.fill = "#a6a5a2";
+        document.getElementById("marker6").style.fill = "#a6a5a2";
     }
     else if(length > (4/6) && length < (5/6)){
+        document.getElementById("marker2").style.fill = "#5999e3";
+        document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("marker4").style.fill = "#5999e3";
+        document.getElementById("marker5").style.fill = "#a6a5a2";
+        document.getElementById("marker6").style.fill = "#a6a5a2";
     }
     else if(length > (5/6) && length < (5.5/6)){
+        document.getElementById("marker2").style.fill = "#5999e3";
+        document.getElementById("marker3").style.fill = "#5999e3";
+        document.getElementById("marker4").style.fill = "#5999e3";
         document.getElementById("marker5").style.fill = "MediumSeaGreen";
+        document.getElementById("marker6").style.fill = "#a6a5a2";
     }
     else if(length >= (5.5/6) && length < (5.9/6)){
+        document.getElementById("marker2").style.fill = "#5999e3";
+        document.getElementById("marker3").style.fill = "#5999e3";
+        document.getElementById("marker4").style.fill = "#5999e3";
+        document.getElementById("marker5").style.fill = "MediumSeaGreen";
         document.getElementById("marker6").style.fill = "#5999e3";
     }
     else if(length >= (5.7/6)){
@@ -79,26 +103,72 @@ function setText(length)
 
 function setZoomCurve(length)
 {
-    let len = (length - 2/6) * 6;
-    let top = len * 90 - 3;
-    let radius = -180*length + 110;
-//    let zoom = 5400*length - 700;
-    let dim = 300 * len + 100;
-    let left = -150*len;
-    let zoom = 2400 * len + 1100;
+    if(length < 2/6){
+        let len = 0;
+        let top = len * 90;
+        let radius = -180*len + 110;
+    //    let zoom = 5400*length - 700;
+        let dim = 300 * len + 100;
+        let left = -150*len;
+        let zoom = 2400 * len + 1100;
 
-    document.getElementById("earth").style.backgroundSize = zoom.toString() + "px";
-    document.getElementById("earth").style.height = dim.toString() + "%";
-    document.getElementById("earth").style.width = dim.toString() + "%";
-    document.getElementById("earthContainer").style.borderRadius = radius.toString() + "%";
-    document.getElementById("earth").style.top = top.toString() + "%";
-    document.getElementById("earth").style.left = left.toString() + "%";
-    document.getElementById("space").style.borderRadius = radius.toString() + "%";
-    document.getElementById("cloud").style.borderRadius = radius.toString() + "%";
-    document.getElementById("atmos1").style.borderRadius = radius.toString() + "%";
-    document.getElementById("atmos2").style.borderRadius = radius.toString() + "%";
-    document.getElementById("atmos3").style.borderRadius = radius.toString() + "%";
-    document.getElementById("atmos4").style.borderRadius = radius.toString() + "%";
+        document.getElementById("earth").style.backgroundSize = zoom.toString() + "px";
+        document.getElementById("earth").style.height = dim.toString() + "%";
+        document.getElementById("earth").style.width = dim.toString() + "%";
+        document.getElementById("earthContainer").style.borderRadius = radius.toString() + "%";
+        document.getElementById("earth").style.top = top.toString() + "%";
+        document.getElementById("earth").style.left = left.toString() + "%";
+        document.getElementById("space").style.borderRadius = radius.toString() + "%";
+        document.getElementById("cloud").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos1").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos2").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos3").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos4").style.borderRadius = radius.toString() + "%";
+    }
+    else if(length > 4/6){
+        let len = 2;
+        let top = len * 90;
+        let radius = -180*len + 110;
+    //    let zoom = 5400*length - 700;
+        let dim = 300 * len + 100;
+        let left = -150*len;
+        let zoom = 2400 * len + 1100;
+
+        document.getElementById("earth").style.backgroundSize = zoom.toString() + "px";
+        document.getElementById("earth").style.height = dim.toString() + "%";
+        document.getElementById("earth").style.width = dim.toString() + "%";
+        document.getElementById("earthContainer").style.borderRadius = radius.toString() + "%";
+        document.getElementById("earth").style.top = top.toString() + "%";
+        document.getElementById("earth").style.left = left.toString() + "%";
+        document.getElementById("space").style.borderRadius = radius.toString() + "%";
+        document.getElementById("cloud").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos1").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos2").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos3").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos4").style.borderRadius = radius.toString() + "%";
+    }
+    else{
+        let len = (length - 2/6) * 6;
+        let top = len * 90;
+        let radius = -180*len + 110;
+    //    let zoom = 5400*length - 700;
+        let dim = 300 * len + 100;
+        let left = -150*len;
+        let zoom = 2400 * len + 1100;
+    
+        document.getElementById("earth").style.backgroundSize = zoom.toString() + "px";
+        document.getElementById("earth").style.height = dim.toString() + "%";
+        document.getElementById("earth").style.width = dim.toString() + "%";
+        document.getElementById("earthContainer").style.borderRadius = radius.toString() + "%";
+        document.getElementById("earth").style.top = top.toString() + "%";
+        document.getElementById("earth").style.left = left.toString() + "%";
+        document.getElementById("space").style.borderRadius = radius.toString() + "%";
+        document.getElementById("cloud").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos1").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos2").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos3").style.borderRadius = radius.toString() + "%";
+        document.getElementById("atmos4").style.borderRadius = radius.toString() + "%";
+    }
 }
 function setBtn(length)
 {
@@ -106,23 +176,23 @@ function setBtn(length)
         resetButton(-1);
     }
     else if(length > (1/6) && length < (2/6)){
-        document.getElementById("rotBt").setAttribute("class","btn btn-secondary");
+        document.getElementById("rotBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(0);
     }
     else if(length > (2/6) && length < (4/6)){
-        document.getElementById("curBt").setAttribute("class","btn btn-secondary");
+        document.getElementById("curBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(1);
     }
     else if(length > (4/6) && length < (5/6)){
-        document.getElementById("htBt").setAttribute("class","btn btn-secondary");
+        document.getElementById("htBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(2);
     }
     else if(length > (5/6) && length < (5.5/6)){
-        document.getElementById("grBt").setAttribute("class","btn btn-success");
+        document.getElementById("grBt").style.background = "MediumSeaGreen";
         resetButton(3);
     }
     else if(length >= (5.5/6) && length < (5.9/6)){
-        document.getElementById("airBt").setAttribute("class","btn btn-secondary");
+        document.getElementById("airBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(4);
     }
 }
@@ -137,7 +207,7 @@ function resetButton(i)
         {
             continue;
         }
-        document.getElementById(btnId[j]).setAttribute("class","btn btn-primary");
+        document.getElementById(btnId[j]).style.background = "rgba(47, 60, 238, 0.75)";
     }
 }
 

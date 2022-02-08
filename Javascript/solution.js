@@ -1,3 +1,25 @@
+window.addEventListener("load", ()=>{
+    //height 711, width 1536
+    if(window.innerHeight < 500 || window.innerWidth < 1000){
+        document.getElementById("exp").style.fontSize = "0.6rem";
+    }
+    else if(window.innerHeight < 700 || window.innerWidth < 1500){
+        document.getElementById("exp").style.fontSize = "0.9rem";
+    }
+});
+window.addEventListener("resize", ()=> {
+    //height 711, width 1536
+    if(window.innerHeight < 500 || window.innerWidth < 1000){
+        document.getElementById("exp").style.fontSize = "0.6rem";
+    }
+    else if(window.innerHeight < 700 || window.innerWidth < 1500){
+        document.getElementById("exp").style.fontSize = "0.9rem";
+    }
+    else{
+        document.getElementById("exp").style.fontSize = "1.3rem";
+    }
+});
+
 setEq();
 function setEq(){
 // Row and Column div
@@ -70,6 +92,7 @@ function sliderReady()
         if(length < 1/4)
         {
             document.getElementById("moreSteps").style.visibility = "hidden";
+            document.getElementById("step").style.visibility = "hidden";
             step2.style.visibility = "hidden";
             step3.style.visibility = "hidden";
             step4.style.visibility = "hidden";
@@ -77,6 +100,8 @@ function sliderReady()
         else if(length > 1/4 && length < 2/4)
         {
             step2.style.visibility = "visible";
+            if(document.getElementById("moreSteps").style.visibility == "hidden")
+                document.getElementById("step").style.visibility = "visible";
             step3.style.visibility = "hidden";
             step4.style.visibility = "hidden";
         }
@@ -108,5 +133,6 @@ function createButton2()
     $('#exp').append(button);
 }
 d3.select("#step").on("click", ()=>{
+    document.getElementById("step").style.visibility = "hidden";
     document.getElementById("moreSteps").style.visibility = "visible";
 });

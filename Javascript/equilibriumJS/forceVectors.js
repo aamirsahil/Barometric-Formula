@@ -1,3 +1,25 @@
+window.addEventListener("load", ()=>{
+    //height 711, width 1536
+    if(window.innerHeight < 500 || window.innerWidth < 1000){
+        document.getElementById("exp").style.fontSize = "0.6rem";
+    }
+    else if(window.innerHeight < 700 || window.innerWidth < 1500){
+        document.getElementById("exp").style.fontSize = "0.7rem";
+    }
+});
+window.addEventListener("resize", ()=> {
+    //height 711, width 1536
+    if(window.innerHeight < 500 || window.innerWidth < 1000){
+        document.getElementById("exp").style.fontSize = "0.6rem";
+    }
+    else if(window.innerHeight < 700 || window.innerWidth < 1500){
+        document.getElementById("exp").style.fontSize = "0.9rem";
+    }
+    else{
+        document.getElementById("exp").style.fontSize = "1.2rem";
+    }
+});
+
 // Elements Highlights on mouse over
 for(let i = 1; i < 10; i++)
 {

@@ -21,7 +21,7 @@
     background: rgba(0, 0, 0, 0.75); /* Black background with 0.5 opacity */
     color: #ececec; /* Grey text */
     width: 50px; /* Full width */
-    height: 90%;
+    height: 25px;
     font-size: 15px;
 }
 #moreSteps{
