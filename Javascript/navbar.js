@@ -28,6 +28,7 @@ window.addEventListener("load", ()=>{
         "/05_equilibrium2.html",
         "/06_solution.html",
     ];
+    console.log("hey");
     let i = link.indexOf(window.location.pathname);
     if(i==4) i=3;
     if(i == 5) i=4;
