@@ -1,3 +1,21 @@
+function svgResize()
+{
+    d3.select("#marker1")
+        .attr("x", 0);
+    d3.select("#marker2")
+        .attr("x", (1/6)*d3.select("#svg").style("width").replace("px", ""));
+        d3.select("#marker3")
+        .attr("x", (2/6)*d3.select("#svg").style("width").replace("px", ""));
+    d3.select("#marker4")
+        .attr("x", (3/6)*d3.select("#svg").style("width").replace("px", ""));
+        d3.select("#marker5")
+        .attr("x", (4/6)*d3.select("#svg").style("width").replace("px", ""));
+    d3.select("#marker6")
+        .attr("x", (5/6)*d3.select("#svg").style("width").replace("px", ""));
+}
+window.addEventListener("load",svgResize());
+// window.addEventListener("resize",svgResize());
+
 d3.select('#myRange02').on("input",function(){
     let value = d3.select(this).property("value");
     let max = d3.select(this).property("max");
@@ -69,10 +87,17 @@ function setText(length)
         document.getElementById("marker5").style.fill = "#a6a5a2";
         document.getElementById("marker6").style.fill = "#a6a5a2";
     }
-    else if(length > (2/6) && length < (4/6)){
+    else if(length > (2/6) && length < (3/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("marker4").style.fill = "#a6a5a2";
+        document.getElementById("marker5").style.fill = "#a6a5a2";
+        document.getElementById("marker6").style.fill = "#a6a5a2";
+    }
+    else if(length > (3/6) && length < (4/6)){
+        document.getElementById("marker2").style.fill = "#5999e3";
+        document.getElementById("marker3").style.fill = "#5999e3";
+        document.getElementById("marker4").style.fill = "#5999e3";
         document.getElementById("marker5").style.fill = "#a6a5a2";
         document.getElementById("marker6").style.fill = "#a6a5a2";
     }
@@ -80,17 +105,10 @@ function setText(length)
         document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("marker4").style.fill = "#5999e3";
-        document.getElementById("marker5").style.fill = "#a6a5a2";
-        document.getElementById("marker6").style.fill = "#a6a5a2";
-    }
-    else if(length > (5/6) && length < (5.5/6)){
-        document.getElementById("marker2").style.fill = "#5999e3";
-        document.getElementById("marker3").style.fill = "#5999e3";
-        document.getElementById("marker4").style.fill = "#5999e3";
         document.getElementById("marker5").style.fill = "MediumSeaGreen";
         document.getElementById("marker6").style.fill = "#a6a5a2";
     }
-    else if(length >= (5.5/6) && length < (5.9/6)){
+    else if(length >= (5/6) && length < (5.9/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("marker4").style.fill = "#5999e3";
@@ -179,15 +197,15 @@ function setBtn(length)
         document.getElementById("rotBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(0);
     }
-    else if(length > (2/6) && length < (4/6)){
+    else if(length > (2/6) && length < (3/6)){
         document.getElementById("curBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(1);
     }
-    else if(length > (4/6) && length < (5/6)){
+    else if(length > (3/6) && length < (4/6)){
         document.getElementById("htBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(2);
     }
-    else if(length > (5/6) && length < (5.5/6)){
+    else if(length > (4/6) && length < (5.5/6)){
         document.getElementById("grBt").style.background = "MediumSeaGreen";
         resetButton(3);
     }

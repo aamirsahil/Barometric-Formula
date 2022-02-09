@@ -13,3 +13,7 @@
       padding: 8px; /* Some padding */
       box-shadow: 0px 0px 8px -1px black;
 }
+center{
+    font-size: large;
+    color: rgb(73, 7, 134);
+}

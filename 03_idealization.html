@@ -26,8 +26,8 @@
         <div class="col-md-2"><a href="04_descretization.html"><img id="img3" src="images\navbar\navbar03.png" alt="dummy.jpg"><div class="content" id="text3"></div></a></div>
         <div class="col-md-2"><a href="05_equilibrium.html"><img id="img4" src="images\navbar\navbar04.png" alt="dummy.jpg"><div class="content" id="text4"></div></a></div>
         <div class="col-md-2"><a href="06_solution.html"><img id="img5" src="images\navbar\navbar05.png" alt="dummy.jpg"><div class="content" id="text5"></div></a></div>
-        <svg class="navSvg" width="100%" height="20px" viewBox="0 0 6 2">
-            <path d="M -40 1.5 H -15" stroke="black" stroke-width="1" style="stroke-opacity: 70%;"></path>
+        <svg class="navSvg" width="100%" height="20px">
+            <path id="track" stroke="black" stroke-width="10" style="stroke-opacity: 70%;"></path>
         </svg>
     </div>
 <!--    The Navigation Bar(close)  -->
@@ -40,7 +40,6 @@
                 <li>Here we strip away details we consider unnecessary to solving the problem at hand.</li>
                 <li>We consider atmosphere as a column of air.</li>
                 <li>Features like rotation of earth, curvature of earth’s surface,  presence of a heat source, composition of air etc are ignored.</li>
-                <li>Drag the slider to view the process of idealization</li>
             </ul>
             <div class="row v-h100">
                     <div class="column">
@@ -59,16 +58,17 @@
                         <div class="content" id="airBt">Air composition</div>
                     </div>  
             </div>
-            <svg width="100%" height="50px" viewBox="0 0 100 50" id="svg">
+            <center>Drag the slider to view the process of idealization</center>
+            <svg width="100%" height="50px" id="svg">
                 <defs>
                     <path id="marker" stroke-linecap="round" d="M 0 25 H 30 L 15 50"/>
                 </defs>
-                <use xlink:href="#marker" id="marker1" fill="#5999e3" x="200" y="0"/>
-                <use xlink:href="#marker" id="marker2" fill="#a6a5a2" x="15" y="0"/>
-                <use xlink:href="#marker" id="marker3" fill="#a6a5a2" x="40" y="0"/>
-                <use xlink:href="#marker" id="marker4" fill="#a6a5a2" x="56" y="0"/>
-                <use xlink:href="#marker" id="marker5" fill="#a6a5a2" x="68" y="0"/>
-                <use xlink:href="#marker" id="marker6" fill="#a6a5a2" x="78" y="0"/>
+                <use xlink:href="#marker" id="marker1" fill="#5999e3"  y="0"/>
+                <use xlink:href="#marker" id="marker2" fill="#a6a5a2"  y="0"/>
+                <use xlink:href="#marker" id="marker3" fill="#a6a5a2"  y="0"/>
+                <use xlink:href="#marker" id="marker4" fill="#a6a5a2"  y="0"/>
+                <use xlink:href="#marker" id="marker5" fill="#a6a5a2"  y="0"/>
+                <use xlink:href="#marker" id="marker6" fill="#a6a5a2"  y="0"/>
             </svg>
             <div class="slidecontainer">
                 <input style=" z-index: 20; width: 100%;" step="0.1" type="range" min="0" max="100" value="0" class="slider" id="myRange02" autocomplete="off">

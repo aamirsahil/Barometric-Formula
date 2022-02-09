@@ -14,6 +14,11 @@
     top: 15px; 
     position: absolute;
 }
+.nextNav{
+    overflow: visible;
+    top: 15px; 
+    position: absolute;
+}
 .selected{
     top:-15px;
     bottom:0;
@@ -65,3 +70,6 @@
 .content:hover{
     background: #e74c3c;
   }
+#navBtn:hover{
+        fill: #0e8a5a;
+}
