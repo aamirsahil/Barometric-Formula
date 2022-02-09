@@ -3,7 +3,8 @@ body {
 }
 html {
   border-style: solid;
-  border-color: #e8eefa;;
+  border-color: #e8eefa;
+  background-color: #e8eefa;
   height: 100%;
   width: 100%;
   border-width: 20px;

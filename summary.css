@@ -1,27 +1,61 @@
+.container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+#arc-slider {
+  height: 140px !important;
+  width: 530px !important;
+  overflow:hidden;
+  padding: 15px;
+}
+#arc-slider .rs-container {
+  margin-left: -350px; /* here 350 is the radius value */
+  left: 50%;
+}
+#arc-slider .rs-tooltip {
+  top: 60px;
+  
+}
+#arc-slider .rs-tooltip-text {
+  font-size: 25px;
+  
+}
+#arc-slider .rs-border{
+  border-width: 0px;
+  background-color: #e8eefa;
+}
+
+/* Appearance related changes */
+.rs-control .rs-range-color {
+  background-color: #54BBE0;
+  
+}
+.rs-control .rs-path-color {
+  background-color: #5f5f5f;
+}
+.rs-control .rs-handle {
+  background-color: #51c5cf;
+}
+
 #summary {
     text-align: center;
-  top: 150px;
-  left: 35%;
+    z-index: 5;
   outline: 8px solid #555;
-  width: 500px;
-  height: 450px;
-  background: url("images/summary/summary01.jpg");
-  position: absolute;
-  border-radius: 50%;
-  background-size: 500px;
+  width: 25%;
+  height: 350px;
+  background: url("images/summary/01.png");
+  background-size: cover;
   }
 .desc {
+  font-size: large;
     visibility: visible;
     z-index:2;
     text-align: center;
-      position: absolute; /* Position the background text */
-      top: 500px; /* At the bottom. Use top:0 to append it to the top */
-      left: 25%;
-      background: rgb(0, 0, 0); /* Fallback color */
-      background: rgba(0, 0, 0, 0.75); /* Black background with 0.5 opacity */
-      color: #f1f1f1; /* Grey text */
-      width: 55%; /* Full width */
-      height: 20%;
+      width: 30%; /* Full width */
+      height: 10%;
       padding: 8px; /* Some padding */
       
 }

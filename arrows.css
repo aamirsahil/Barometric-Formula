@@ -1,4 +1,4 @@
-.border{
+/* .border{
     width: 80px;
     height: 60px;
     background-color: black;
@@ -45,4 +45,10 @@
 .left {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+} */
+.arrowBody{
+  visibility: hidden;
+  position: absolute;
+  top:0;
+  left:95%;
 }
