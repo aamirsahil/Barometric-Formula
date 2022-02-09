@@ -28,8 +28,8 @@ window.addEventListener("load", ()=>{
         "/05_equilibrium2.html",
         "/06_solution.html",
     ];
-    console.log(window.location.pathname);
-    let i = link.indexOf(window.location.pathname);
+    let loc = window.location.pathname.replace("/Barometric-Formula", "");
+    let i = link.indexOf(loc);
     if(i==4) i=3;
     if(i == 5) i=4;
     let width = d3.select(".navSvg").style("width").replace("px","");
