@@ -57,7 +57,10 @@ d3.select("#mySlider").on("input", function()
     }
     else if(length > 3/5)
     {
-        button.style.visibility = "visible";
+        d3.select(".arrowBody").style("visibility" , "visible")
+        .on("click", ()=>{
+            window.location = "06_solution.html";
+        });
         step2.style.visibility = "visible";
         step3.style.visibility = "visible";
         step4.style.visibility = "visible";

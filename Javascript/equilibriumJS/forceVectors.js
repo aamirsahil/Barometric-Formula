@@ -16,7 +16,7 @@ window.addEventListener("resize", ()=> {
         document.getElementById("exp").style.fontSize = "0.9rem";
     }
     else{
-        document.getElementById("exp").style.fontSize = "1.2rem";
+        document.getElementById("exp").style.fontSize = "1.1rem";
     }
 });
 
@@ -53,8 +53,10 @@ for(let i = 1; i < 10; i++)
     });
 }
 function activateButton(){
-    document.getElementById("derivation").disabled = false;
-    document.getElementById("derivation").style.visibility = "visible";
+    d3.select(".arrowBody").style("visibility" , "visible")
+        .on("click", ()=>{
+            window.location = "05_equilibrium2.html";
+        });
 }
 function activateText(){
     document.getElementById("force").style.visibility = "visible";

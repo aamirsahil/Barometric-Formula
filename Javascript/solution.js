@@ -56,6 +56,7 @@ function setEq(){
     slider.setAttribute('class','slider');
     slider.style.transform = "rotate(90deg)";
     slider.style.margin = "-120px";
+    slider.style.height= "150%";
 // Setting the inner html
     step1.innerHTML = text1;
     step2.innerHTML = text2;
@@ -75,7 +76,6 @@ function setEq(){
     $('#col2').append(slider);
 //Navigation Button
     sliderReady();
-    createButton2();
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
 function sliderReady()
@@ -85,7 +85,6 @@ function sliderReady()
         let value = d3.select(this).property("value");
         let max = d3.select(this).property("max");
         let min = d3.select(this).property("min");
-        let exercise = document.getElementById("summary");
         let length = value/(max - min);
         let graph = document.getElementById("graph");
 
@@ -116,22 +115,15 @@ function sliderReady()
             step2.style.visibility = "visible";
             step3.style.visibility = "visible";
             step4.style.visibility = "visible";
-            exercise.style.visibility = "visible";
             graph.style.visibility = "visible";
+            d3.select(".arrowBody").style("visibility" , "visible")
+            .on("click", ()=>{
+                window.location = "07_final.html";
+            });
         }
     });
 }
-function createButton2()
-{
-    let button = document.createElement('button');
-    button.setAttribute('id','summary');
-    button.setAttribute('type','button');
-    button .innerHTML = "Go to Summary"
-    button.setAttribute('class','btn btn-primary');
-    button.style.float = "right";
-    button.style.visibility = "hidden";
-    $('#exp').append(button);
-}
+
 d3.select("#step").on("click", ()=>{
     document.getElementById("step").style.visibility = "hidden";
     document.getElementById("moreSteps").style.visibility = "visible";

@@ -69,7 +69,7 @@ d3.select('#myRange').on("input",function(){
     else if(length > 4/5 && length <= 4.9/5){
 //        check = true;
         document.getElementById("img01").src = "images\\Descretization\\05_alt.png";
-        
+
         document.getElementById("marker5").style.fill = "#5999e3";
         document.getElementById("marker6").style.fill = "#a6a5a2";
 
@@ -84,6 +84,10 @@ d3.select('#myRange').on("input",function(){
         document.getElementById("point01").style.visibility = "visible";
         document.getElementById("point02").style.visibility = "visible";
         document.getElementById("point03").style.visibility = "visible";
+        d3.select(".arrowBody").style("visibility" , "visible")
+        .on("click", ()=>{
+            window.location = "05_equilibrium.html";
+        });
     }
 })
 

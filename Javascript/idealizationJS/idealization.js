@@ -116,6 +116,10 @@ function setText(length)
         document.getElementById("marker6").style.fill = "#5999e3";
     }
     else if(length >= (5.7/6)){
+        d3.select(".arrowBody").style("visibility" , "visible")
+        .on("click", ()=>{
+            window.location = "04_descretization.html";
+        });
     }
 }
 
