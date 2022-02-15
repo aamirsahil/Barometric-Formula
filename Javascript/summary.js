@@ -1,4 +1,8 @@
-var text = [];
+var text = ["We started with an real life example which we needed to model to obtain relation between relevant quantities.",
+"We idealize the system by stripping away unnecessary components",
+"Now we partition the system the system to smaller components that all act similiarly",
+"Now we introduce geomertic element to better understand the system",
+"We now describe the system using algebra."];
 
 $("#arc-slider").roundSlider({
     sliderType: "min-range",
@@ -30,7 +34,22 @@ function opacity(len,min,max)
     return opacity;
 }
 function changeText(len){
-
+    let desc = document.getElementById("text");
+    if(len < 2/100){
+        desc.innerHTML = text[0];
+    }
+    else if(len > 2/100 && len < 25/100){
+        desc.innerHTML = text[1];
+    }
+    else if(len > 25/100 && len < 50/100){
+        desc.innerHTML = text[2];
+    }
+    else if(len > 50/100 && len < 65/100){
+        desc.innerHTML = text[3];
+    }
+    else{
+        desc.innerHTML = text[4];
+    }
 }
 function changeImg(len){
     for(let i = 0; i <= 11; i++)
