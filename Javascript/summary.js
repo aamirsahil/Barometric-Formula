@@ -19,18 +19,22 @@ $("#arc-slider").roundSlider({
         changeImg(args.value/100);
     }
 });
-
+function opacity(len,min,max)
+{
+    if(len > max)
+        return 0;
+    if(len < min)
+        return 100;
+    let slope = -100/(max - min);
+    let opacity = slope*(len - max);
+    return opacity;
+}
 function changeText(len){
 
 }
 function changeImg(len){
-    let img = document.getElementById("summary");
-    for(let i = 0; i <= 11; i++){
-        if(len > i/12 && len < (i+1)/12){
-            img.style.backgroundImage = "url(\"images/summary/0" + (i+1).toString() + ".png\")";
-            return;
-        } 
-    }
+    for(let i = 0; i <= 11; i++)
+        d3.select("#sum" + (i+1)).style("opacity", opacity(len,i/12,(i+1)/12) + "%");
 }
 d3.select(".arrowBody")
 .on("click", ()=>{
