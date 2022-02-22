@@ -1,5 +1,5 @@
 var text = ["We were interested in studying the variation of atmospheric pressure with height.",
-"We Idealized the atmosphere and considered it as a column of air.",
+"We idealized the atmosphere and considered it as a column of air.",
 "We continuous column of air was then considered to be made of smaller discrete columns.",
 "The discretised column are thenplaced in a co-ordinate system.",
 "Net forces acting on an arbitrary column in equilibrium were identified.",
