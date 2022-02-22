@@ -1,8 +1,10 @@
-var text = ["We started with an real life example which we needed to model to obtain relation between relevant quantities.",
-"We idealize the system by stripping away unnecessary components",
-"Now we partition the system the system to smaller components that all act similiarly",
-"Now we introduce geomertic element to better understand the system",
-"We now describe the system using algebra."];
+var text = ["We were interested in studying how atmospheric pressure changes with altitude.",
+"We stripped away details we consider unnecessary to solving the problem at hand, and consider the atmosphere as a column of air.",
+"We considered the continuous column of air to be made of smaller discrete columns.",
+"We put the the discretised column of atmosphere in a 1 D coordinate system and focused our analysis on one arbitrary column.",
+"The relevant quatities are then represented using mathematical symbols, which on manipulation, gave us our desired result."];
+
+var head = ["Reality","Idealization","Discretization","Geometry","Algebra"]
 
 $("#arc-slider").roundSlider({
     sliderType: "min-range",
@@ -14,7 +16,22 @@ $("#arc-slider").roundSlider({
     width: 6,
     handleSize: "+32",
     tooltipFormat: function (args) {
-        return args.value + " %";
+        let len = args.value;
+        if(len <= 2){
+            return head[0];
+        }
+        else if(len > 2 && len <= 25){
+            return head[1];
+        }
+        else if(len > 25 && len <= 50){
+            return head[2];
+        }
+        else if(len > 50 && len <= 65){
+            return head[3];
+        }
+        else{
+            return head[4];
+        }
     },
     drag: function(args){
         let text = document.getElementById("text");
