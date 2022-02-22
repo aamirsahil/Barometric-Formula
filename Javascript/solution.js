@@ -43,9 +43,9 @@ function setEq(){
     step4.setAttribute('id', 'step4');
 // Derivation steps
     let text1 = "Analysisng the system we got, $$ dP = -\\rho gdz $$";
-    let text2 = "From the Ideal gas equation, $$ \\rho(P) = \\frac{PM}{RT} $$<span class=\"der\"><div id=\"step\" class=\"content\">steps</div></span>";
+    let text2 = "From the Ideal gas equation<span class=\"instruct\" >(click on colored area to expand)</span>, <div class=\"der\" id=\"step\">$$ \\rho(P) = \\frac{PM}{RT} $$</div>";
     let text3 = "Implies, $$ dP = -\\frac{PM}{RT}gdz $$";
-    let text4 ="On integrating, $$ P(z) = P_0e^{-\\frac{Mg}{RT}z} $$";
+    let text4 ="On integrating<span class=\"instruct\" >(click on colored area to expand)</span>, <div class=\"der\" id=\"stepInt\">$$ P(z) = P_0e^{-\\frac{Mg}{RT}z} $$</div>";
 // The Slider
 // Setting the inner html
     step1.innerHTML = text1;
@@ -75,26 +75,24 @@ function sliderReady()
         let max = d3.select(this).property("max");
         let min = d3.select(this).property("min");
         let length = value/(max - min);
-        let graph = document.getElementById("graph");
-
         if(length < 1/4)
         {
+            document.getElementById("moreSteps2").style.visibility = "hidden";
             document.getElementById("moreSteps").style.visibility = "hidden";
-            document.getElementById("step").style.visibility = "hidden";
             step2.style.visibility = "hidden";
             step3.style.visibility = "hidden";
             step4.style.visibility = "hidden";
         }
         else if(length > 1/4 && length < 2/4)
         {
+            document.getElementById("moreSteps2").style.visibility = "hidden";
             step2.style.visibility = "visible";
-            if(document.getElementById("moreSteps").style.visibility == "hidden")
-                document.getElementById("step").style.visibility = "visible";
             step3.style.visibility = "hidden";
             step4.style.visibility = "hidden";
         }
         else if(length > 2/4 && length < 3/4)
         {
+            document.getElementById("moreSteps2").style.visibility = "hidden";
             step2.style.visibility = "visible";
             step3.style.visibility = "visible";
             step4.style.visibility = "hidden";
@@ -104,16 +102,17 @@ function sliderReady()
             step2.style.visibility = "visible";
             step3.style.visibility = "visible";
             step4.style.visibility = "visible";
-            graph.style.visibility = "visible";
             d3.select(".arrowBody").style("visibility" , "visible")
             .on("click", ()=>{
-                window.location = "07_final.html";
+                window.location = "06_solution2.html";
             });
         }
     });
 }
 
 d3.select("#step").on("click", ()=>{
-    document.getElementById("step").style.visibility = "hidden";
     document.getElementById("moreSteps").style.visibility = "visible";
+});
+d3.select("#stepInt").on("click", ()=>{
+    document.getElementById("moreSteps2").style.visibility = "visible";
 });
