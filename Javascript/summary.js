@@ -78,5 +78,5 @@ function changeImg(len){
 }
 d3.select(".arrowBody")
 .on("click", ()=>{
-    window.location = "06_exercise.html";
+    window.location = "index.html";
 });
