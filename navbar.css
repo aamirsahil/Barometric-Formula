@@ -31,13 +31,13 @@
     opacity: 100%;
 }
 #logo{
-    opacity: 50%;
     z-index:2; 
     left: 0; 
-    top: 7px; 
+    top: 0px; 
     position: absolute;
-    height:60%; 
-    width:40%"
+    height:80px;
+    width:80px;
+    opacity: 25%;
 }
 .col-md-2.logo{
     position: relative;

@@ -17,3 +17,9 @@ center{
     font-size: large;
     color: rgb(73, 7, 134);
 }
+#svg{
+    overflow: visible;
+}
+.separate{
+    margin: 50px;
+}
