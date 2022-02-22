@@ -1,24 +1,24 @@
-window.addEventListener("load", ()=>{
-    //height 711, width 1536
-    if(window.innerHeight < 500 || window.innerWidth < 1000){
-        document.getElementById("exp").style.fontSize = "0.8rem";
-    }
-    else if(window.innerHeight < 700 || window.innerWidth < 1500){
-        document.getElementById("exp").style.fontSize = "0.9rem";
-    }
-});
-window.addEventListener("resize", ()=> {
-    //height 711, width 1536
-    if(window.innerHeight < 500 || window.innerWidth < 1000){
-        document.getElementById("exp").style.fontSize = "0.8rem";
-    }
-    else if(window.innerHeight < 700 || window.innerWidth < 1500){
-        document.getElementById("exp").style.fontSize = "0.9rem";
-    }
-    else{
-        document.getElementById("exp").style.fontSize = "1.3rem";
-    }
-});
+// window.addEventListener("load", ()=>{
+//     //height 711, width 1536
+//     if(window.innerHeight < 500 || window.innerWidth < 1000){
+//         document.getElementById("exp").style.fontSize = "0.8rem";
+//     }
+//     else if(window.innerHeight < 700 || window.innerWidth < 1500){
+//         document.getElementById("exp").style.fontSize = "0.9rem";
+//     }
+// });
+// window.addEventListener("resize", ()=> {
+//     //height 711, width 1536
+//     if(window.innerHeight < 500 || window.innerWidth < 1000){
+//         document.getElementById("exp").style.fontSize = "0.8rem";
+//     }
+//     else if(window.innerHeight < 700 || window.innerWidth < 1500){
+//         document.getElementById("exp").style.fontSize = "0.9rem";
+//     }
+//     else{
+//         document.getElementById("exp").style.fontSize = "1.3rem";
+//     }
+// });
 
 setEq();
 function setEq(){
