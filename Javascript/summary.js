@@ -1,6 +1,6 @@
 var text = ["We were interested in studying the variation of atmospheric pressure with height.",
 "We idealized the atmosphere and considered it as a column of air.",
-"We continuous column of air was then considered to be made of smaller discrete columns.",
+"The continuous column of air was then considered to be made of smaller discrete columns.",
 "The discretised column are thenplaced in a co-ordinate system.",
 "Net forces acting on an arbitrary column in equilibrium were identified.",
 "Involved Ideal gas equation and calculated the variation of pressure with height."];
@@ -53,19 +53,19 @@ function opacity(len,min,max)
 }
 function changeText(len){
     let desc = document.getElementById("text");
-    if(len < 2/100){
+    if(len <= 2/100){
         desc.innerHTML = text[0];
     }
-    else if(len > 2/100 && len < 25/100){
+    else if(len > 2/100 && len <= 25/100){
         desc.innerHTML = text[1];
     }
-    else if(len > 25/100 && len < 50/100){
+    else if(len > 25/100 && len <= 50/100){
         desc.innerHTML = text[2];
     }
-    else if(len > 50/100 && len < 65/100){
+    else if(len > 50/100 && len <= 65/100){
         desc.innerHTML = text[3];
     }
-    else if(len > 65/100 && len < 80/100){
+    else if(len > 65/100 && len <= 80/100){
         desc.innerHTML = text[4];
     }
     else{
