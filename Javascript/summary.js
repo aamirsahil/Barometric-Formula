@@ -1,9 +1,9 @@
 var text = ["We were interested in studying the variation of atmospheric pressure with height.",
 "We idealized the atmosphere and considered it as a column of air.",
 "The continuous column of air was then considered to be made of smaller discrete columns.",
-"The discretised column are thenplaced in a co-ordinate system.",
+"The discretised column are then placed in a co-ordinate system.",
 "Net forces acting on an arbitrary column in equilibrium were identified.",
-"Involved Ideal gas equation and calculated the variation of pressure with height."];
+"Invoked Ideal gas equation and calculated the variation of pressure with height."];
 
 var head = ["Reality","Idealization","Discretization","Geometry","Algebra"]
 
