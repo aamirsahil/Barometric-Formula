@@ -2,13 +2,13 @@
 window.addEventListener("load", ()=>{
     //height 711, width 1536
     if(window.innerHeight < 700 || window.innerWidth < 1536){
-        document.getElementById("exp").style.fontSize = "1.2rem";
+        document.getElementById("exp").style.fontSize = "1.3rem";
     }
 });
 window.addEventListener("resize", ()=> {
     //height 711, width 1536
     if(window.innerHeight < 700 || window.innerWidth < 1536){
-        document.getElementById("exp").style.fontSize = "1.2rem";
+        document.getElementById("exp").style.fontSize = "1.3rem";
     }
     else{
         document.getElementById("exp").style.fontSize = "1.4rem";

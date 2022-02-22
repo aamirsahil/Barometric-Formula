@@ -5,13 +5,13 @@ function svgResize()
     d3.select("#marker2")
         .attr("x", (1/6)*d3.select("#svg").style("width").replace("px", ""));
         d3.select("#marker3")
-        .attr("x", (2/6)*d3.select("#svg").style("width").replace("px", ""));
+        .attr("x", (2.3/6)*d3.select("#svg").style("width").replace("px", ""));
     d3.select("#marker4")
-        .attr("x", (3/6)*d3.select("#svg").style("width").replace("px", ""));
+        .attr("x", (3.3/6)*d3.select("#svg").style("width").replace("px", ""));
         d3.select("#marker5")
-        .attr("x", (4/6)*d3.select("#svg").style("width").replace("px", ""));
+        .attr("x", (4.4/6)*d3.select("#svg").style("width").replace("px", ""));
     d3.select("#marker6")
-        .attr("x", (5/6)*d3.select("#svg").style("width").replace("px", ""));
+        .attr("x", (5.8/6)*d3.select("#svg").style("width").replace("px", ""));
 }
 window.addEventListener("load",svgResize());
 // window.addEventListener("resize",svgResize());
@@ -57,7 +57,7 @@ function setImage(length)
     document.getElementById("earth").style.opacity = opacity(length,2.7/6,3/6).toString() + "%";
     document.getElementById("space").style.opacity = opacity(length,2.8/6,3/6).toString() + "%";
     document.getElementById("cloud").style.opacity = opacity(length,2.8/6,3/6).toString() + "%";
-    document.getElementById("atmos1").style.opacity = opacity(length,3/6,4/6).toString() + "%";
+    document.getElementById("atmos1").style.opacity = opacity(length,3.2/6,3.3/6).toString() + "%";
     document.getElementById("atmos2").style.opacity = opacity(length,4/6,5.9/6).toString() + "%";
     document.getElementById("atmos3").style.opacity = opacity(length,5.9/6,1).toString() + "%";
 }
@@ -87,39 +87,33 @@ function setText(length)
         document.getElementById("marker5").style.fill = "#a6a5a2";
         document.getElementById("marker6").style.fill = "#a6a5a2";
     }
-    else if(length > (2/6) && length < (3/6)){
+    else if(length > (2.3/6) && length < (3.3/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("marker4").style.fill = "#a6a5a2";
         document.getElementById("marker5").style.fill = "#a6a5a2";
         document.getElementById("marker6").style.fill = "#a6a5a2";
     }
-    else if(length > (3/6) && length < (4/6)){
+    else if(length > (3.3/6) && length < (4.4/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("marker4").style.fill = "#5999e3";
         document.getElementById("marker5").style.fill = "#a6a5a2";
         document.getElementById("marker6").style.fill = "#a6a5a2";
     }
-    else if(length > (4/6) && length < (5/6)){
+    else if(length > (4.4/6) && length < (5.8/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("marker4").style.fill = "#5999e3";
         document.getElementById("marker5").style.fill = "MediumSeaGreen";
         document.getElementById("marker6").style.fill = "#a6a5a2";
     }
-    else if(length >= (5/6) && length < (5.9/6)){
+    else if(length >= (5.8/6) && length < (5.9/6)){
         document.getElementById("marker2").style.fill = "#5999e3";
         document.getElementById("marker3").style.fill = "#5999e3";
         document.getElementById("marker4").style.fill = "#5999e3";
         document.getElementById("marker5").style.fill = "MediumSeaGreen";
         document.getElementById("marker6").style.fill = "#5999e3";
-    }
-    else if(length >= (5.7/6)){
-        d3.select(".arrowBody").style("visibility" , "visible")
-        .on("click", ()=>{
-            window.location = "04_descretization.html";
-        });
     }
 }
 
@@ -201,19 +195,19 @@ function setBtn(length)
         document.getElementById("rotBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(0);
     }
-    else if(length > (2/6) && length < (3/6)){
+    else if(length > (2.3/6) && length < (3.3/6)){
         document.getElementById("curBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(1);
     }
-    else if(length > (3/6) && length < (4/6)){
+    else if(length > (3.3/6) && length < (4.4/6)){
         document.getElementById("htBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(2);
     }
-    else if(length > (4/6) && length < (5.5/6)){
+    else if(length > (4.4/6) && length < (5.8/6)){
         document.getElementById("grBt").style.background = "MediumSeaGreen";
         resetButton(3);
     }
-    else if(length >= (5.5/6) && length < (5.9/6)){
+    else if(length >= (5.8/6) && length < (5.9/6)){
         document.getElementById("airBt").style.background = "rgba(48, 51, 100, 0.75)";
         resetButton(4);
     }

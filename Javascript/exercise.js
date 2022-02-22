@@ -8,7 +8,7 @@ const question = [
 const hint = [
     ["What law governs the change in gravitational force with distance?",
     "Where did we assume constant g in our previous derivation?",
-    "Get the modifies differential equation and solve using the widget."],
+    "Get the modified differential equation and solve using the widget."],
     ["Write down the equation of state connecting pressure volume and temperature",
     "Where did we assume the system as ideal gas?",
     "Get the modifies differential equation and solve using the widget."],

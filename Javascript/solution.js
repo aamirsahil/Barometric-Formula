@@ -47,16 +47,6 @@ function setEq(){
     let text3 = "Implies, $$ dP = -\\frac{PM}{RT}gdz $$";
     let text4 ="On integrating, $$ P(z) = P_0e^{-\\frac{Mg}{RT}z} $$";
 // The Slider
-    let slider = document.createElement('input');
-    slider.setAttribute('id', 'mySlider');
-    slider.setAttribute('type','range');
-    slider.setAttribute('min','0');
-    slider.setAttribute('max','100');
-    slider.setAttribute('value','0');
-    slider.setAttribute('class','slider');
-    slider.style.transform = "rotate(90deg)";
-    slider.style.margin = "-120px";
-    slider.style.height= "150%";
 // Setting the inner html
     step1.innerHTML = text1;
     step2.innerHTML = text2;
@@ -73,7 +63,6 @@ function setEq(){
     $('#col1').append(step2);
     $('#col1').append(step3);
     $('#col1').append(step4);
-    $('#col2').append(slider);
 //Navigation Button
     sliderReady();
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
