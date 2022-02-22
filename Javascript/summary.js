@@ -1,8 +1,9 @@
-var text = ["We were interested in studying how atmospheric pressure changes with altitude.",
-"We stripped away details we consider unnecessary to solving the problem at hand, and consider the atmosphere as a column of air.",
-"We considered the continuous column of air to be made of smaller discrete columns.",
-"We put the the discretised column of atmosphere in a 1 D coordinate system and focused our analysis on one arbitrary column.",
-"The relevant quatities are then represented using mathematical symbols, which on manipulation, gave us our desired result."];
+var text = ["We were interested in studying the variation of atmospheric pressure with height.",
+"We Idealized the atmosphere and considered it as a column of air.",
+"We continuous column of air was then considered to be made of smaller discrete columns.",
+"The discretised column are thenplaced in a co-ordinate system.",
+"Net forces acting on an arbitrary column in equilibrium were identified.",
+"Involved Ideal gas equation and calculated the variation of pressure with height."];
 
 var head = ["Reality","Idealization","Discretization","Geometry","Algebra"]
 
@@ -64,8 +65,11 @@ function changeText(len){
     else if(len > 50/100 && len < 65/100){
         desc.innerHTML = text[3];
     }
-    else{
+    else if(len > 65/100 && len < 80/100){
         desc.innerHTML = text[4];
+    }
+    else{
+        desc.innerHTML = text[5];
     }
 }
 function changeImg(len){
