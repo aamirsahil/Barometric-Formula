@@ -1,7 +1,7 @@
 window.addEventListener("load", ()=>{
     //height 711, width 1536
     if(window.innerHeight < 500 || window.innerWidth < 1000){
-        document.getElementById("exp").style.fontSize = "0.6rem";
+        document.getElementById("exp").style.fontSize = "0.8rem";
     }
     else if(window.innerHeight < 700 || window.innerWidth < 1500){
         document.getElementById("exp").style.fontSize = "0.9rem";
@@ -10,7 +10,7 @@ window.addEventListener("load", ()=>{
 window.addEventListener("resize", ()=> {
     //height 711, width 1536
     if(window.innerHeight < 500 || window.innerWidth < 1000){
-        document.getElementById("exp").style.fontSize = "0.6rem";
+        document.getElementById("exp").style.fontSize = "0.8rem";
     }
     else if(window.innerHeight < 700 || window.innerWidth < 1500){
         document.getElementById("exp").style.fontSize = "0.9rem";
@@ -42,10 +42,10 @@ function setEq(){
     step3.setAttribute('id', 'step3');
     step4.setAttribute('id', 'step4');
 // Derivation steps
-    let text1 = "Analysisng the system we got, $$ dP = -\\rho gdz $$";
-    let text2 = "From the Ideal gas equation<span class=\"instruct\" >(click on colored area to expand)</span>, <div class=\"der\" id=\"step\">$$ \\rho(P) = \\frac{PM}{RT} $$</div>";
+    let text1 = "Analysing the system we got, $$ dP = -\\rho gdz $$";
+    let text2 = "From the Ideal gas equation, <div class=\"der\" id=\"step\">$$ \\rho(P) = \\frac{PM}{RT} $$</div>";
     let text3 = "Implies, $$ dP = -\\frac{PM}{RT}gdz $$";
-    let text4 ="On integrating<span class=\"instruct\" >(click on colored area to expand)</span>, <div class=\"der\" id=\"stepInt\">$$ P(z) = P_0e^{-\\frac{Mg}{RT}z} $$</div>";
+    let text4 ="On integrating, <div class=\"der\" id=\"stepInt\">$$ P(z) = P_0e^{-\\frac{Mg}{RT}z} $$</div>";
 // The Slider
 // Setting the inner html
     step1.innerHTML = text1;
