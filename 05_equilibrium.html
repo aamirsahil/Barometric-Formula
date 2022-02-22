@@ -50,18 +50,19 @@
 <!--    Force Values(close)  -->
     <div class="row">
 <!--        Force Equation  -->
-        <div id="exp" class="col-md-6" style="font-size: 1.48em; padding: 2px;">
+        <div id="exp" class="col-md-6" style="font-size: 1.28em; padding: 2px;">
 <!--            Explanation  -->
             <b><h1>Let us put the system on a coordinate system !</h1></b>
             <ul>
                 <li>We put the the discretised column of atmosphere in a 1 D coordinate system.</li>
                 <li>We focus our analysis on one arbitrary column. Let A be its cross sectional area and \(\Delta z\) the thickness.
+                    <b>(Click on any column to explore the dynamics !)</b>
                 </li>
                 <li id="force" style="visibility: hidden; padding-top: 40px;">As can be seen, 3 forces are acting on the column.
-                    <ul style="margin: 0 20px;;">
-                        <li>Force due to atmospheric pressure from above, \( F_1 = P_{i+1} \times A \)</li>
-                        <li>Force due to weight of the column of air, \( F_2 = \rho Agdz \)</li>
-                        <li>Force due to atmospheric pressure from below, \( F_3 = P_{i} \times A \)</li>
+                    <ul style="margin: 0 40px;;">
+                        <li>Force due to atmospheric pressure from above, $$ F_1 = P_{i+1} \times A $$</li>
+                        <li>Force due to weight of the column of air, $$ F_2 = \rho Agdz $$</li>
+                        <li>Force due to atmospheric pressure from below, $$ F_3 = P_{i} \times A $$</li>
                     </ul>
                 </li>   
             </ul>
@@ -74,7 +75,7 @@
 <!--        Force Equation(close)  -->
 <!--        Force Vectors  -->
         <div class="col-md-6" style="position: relative; background-color: #e8eefa;;">
-            <h3 style="height: 2px; text-align: left;position: absolute;">Click on any pressure element</h3>
+            <!-- <h3 style="height: 2px; text-align: left;position: absolute;">Click on any pressure element</h3> -->
             <svg width="120%" height="110%" viewBox="0 0 200 200" id="svg" style="background-color:#e8eefa;;">
 <!--                Axis  -->
                 <path id="axis" stroke="black" stroke-width="2" style="stroke-opacity: 70%;"/>
