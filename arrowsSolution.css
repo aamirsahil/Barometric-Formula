@@ -9,6 +9,10 @@
 .der{
   background-color: antiquewhite; 
   padding: 2px;
+  
+}
+.der:hover{
+  cursor: pointer;
 }
 #moreSteps{
   border: 8px solid #555;
